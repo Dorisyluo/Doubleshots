@@ -73,6 +73,7 @@ public class OVRGrabber : MonoBehaviour
     protected Quaternion m_grabbedObjectRotOff;
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
 	protected bool m_operatingWithoutOVRCameraRig = true;
+    public GameObject Load;
 
     /// <summary>
     /// The currently grabbed object.
@@ -359,7 +360,7 @@ public class OVRGrabber : MonoBehaviour
 
             GrabbableRelease(linearVelocity, angularVelocity);
         }
-
+        
         // Re-enable grab volumes to allow overlap events
         GrabVolumeEnable(true);
     }
