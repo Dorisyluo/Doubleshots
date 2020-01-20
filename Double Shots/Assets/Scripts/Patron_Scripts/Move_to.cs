@@ -4,43 +4,65 @@ using UnityEngine;
 
 public class Move_To : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     public GameObject[] chairs;
     public float speed = 5;
-    private int index = 0;
-    private GameObject targetChair;
-    private bool targetFound = false;
-    // Update is called once per frame
+    private int index = 1;
+    private Vector3 targetChair;
+    private Vector3 doorLocation;
+    private GameObject door;
+    public bool entered;
+
+    // Start is called before the first frame update
     void Start()
     {
-        chairs = GameObject.FindGameObjectsWithTag("Seat");
-        for(;index < chairs.Length; index++)
+        door  = GameObject.Find("Entrance");
+        doorLocation = new Vector3(door.transform.position.x, transform.position.y, door.transform.position.z);
+        chairs = GetComponent<Check_Spaces>().openChairs;
+        if(chairs.Length > 0)
         {
-            if (!chairs[index].GetComponent<Occupied>().occupied)
-            {
-                Debug.Log(chairs[index] + " " + index);
-                targetFound = true;
-                break;
-            }
-            
-        }
-        if (targetFound)
-        {
-            targetChair = chairs[index];
+            index = Random.Range(0, chairs.Length);
         }
         
+        targetChair = new Vector3 (chairs[index].transform.position.x, transform.position.y, chairs[index].transform.position.z);
+        
     }
+
+    // Update is called once per frame
     void Update()
     {
-        float step = speed * Time.deltaTime;
-        if (targetFound && !chairs[index].GetComponent<Occupied>().occupied)
+        float moveSpeed = speed * Time.deltaTime;
+        if (!entered)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetChair.transform.position.x, transform.position.y, targetChair.transform.position.z), step);
+            moveToDoor(moveSpeed);
         }
-        if (Mathf.Abs(transform.position.x - targetChair.transform.position.x) < 0.01f && Mathf.Abs(transform.position.z - targetChair.transform.position.z) < 0.01f)
+        else if (entered)
+        {
+            moveToSeat(moveSpeed);
+        }
+       
+       
+    }
+    void moveToSeat(float step)
+    {
+        if (chairs.Length > 0)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetChair, step);
+        }
+
+        if (Mathf.Abs(transform.position.x - targetChair.x) < 0.01f && Mathf.Abs(transform.position.z - targetChair.z) < 0.01f)
         {
             chairs[index].GetComponent<Occupied>().occupied = true;
         }
     }
 
+    void moveToDoor(float step)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, doorLocation, step);
+        
+        if (Mathf.Abs(transform.position.x - doorLocation.x) < 0.01f && Mathf.Abs(transform.position.z - doorLocation.z) < 0.01f)
+        {
+            entered = true;
+        }
+    }
 }

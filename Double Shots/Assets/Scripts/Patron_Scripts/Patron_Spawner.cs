@@ -8,6 +8,7 @@ public class Patron_Spawner : MonoBehaviour
     public bool stopSpawning = false;
     public float secSpawnTime;
     public float secSpawnDelay;
+    public GameObject[] chairs;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +18,21 @@ public class Patron_Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        chairs = GetComponent<Check_Spaces>().openChairs;
+        if (chairs.Length <= 0)
+        {
+            CancelInvoke("SpawnPatron");
+            stopSpawning = true;
+        }
     }
     public void SpawnPatron()
     {
-        Instantiate(patron, transform.position, transform.rotation);
         if (stopSpawning)
         {
             CancelInvoke("SpawnPatron");
         }
+        Instantiate(patron, transform.position, transform.rotation);
+        
+        
     }
 }
