@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Check_Spaces : MonoBehaviour
 {
-    public GameObject[] chairs;
+    private GameObject[] chairs;
     public GameObject[] pool1;
     public GameObject[] pool2;
-    public GameObject[] openChairs;
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +32,10 @@ public class Check_Spaces : MonoBehaviour
             }
 
         }    
-        openChairs = validChairs.ToArray();
+        GetComponent<Observer_Data>().openSeats = validChairs.ToArray();
     }
 
+    //******We don't know how the "pools" look and work yet*****//
     public void getPool1()
     {
         //return open spaces in pool 1

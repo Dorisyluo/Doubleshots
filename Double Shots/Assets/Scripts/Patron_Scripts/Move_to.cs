@@ -11,14 +11,16 @@ public class Move_To : MonoBehaviour
     private Vector3 targetChair;
     private Vector3 doorLocation;
     private GameObject door;
+    private GameObject observer;
     public bool entered;
 
     // Start is called before the first frame update
     void Start()
     {
         door  = GameObject.Find("Entrance");
+        observer = GameObject.Find("Observer");
         doorLocation = new Vector3(door.transform.position.x, transform.position.y, door.transform.position.z);
-        chairs = GetComponent<Check_Spaces>().openChairs;
+        chairs = observer.GetComponent<Observer_Data>().openSeats;
         if(chairs.Length > 0)
         {
             index = Random.Range(0, chairs.Length);

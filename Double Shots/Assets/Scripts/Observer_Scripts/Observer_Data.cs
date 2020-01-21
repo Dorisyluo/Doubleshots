@@ -9,4 +9,5 @@ public class Observer_Data : MonoBehaviour
     public bool pool2Full;
     public bool barFull;
     public int barCapacity;
+    public GameObject[] openSeats;
 }
