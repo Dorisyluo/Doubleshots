@@ -5,8 +5,8 @@ using UnityEngine;
 public class Check_Spaces : MonoBehaviour
 {
     private GameObject[] chairs;
-    public GameObject[] pool1;
-    public GameObject[] pool2;
+    private GameObject[] pool1;
+    private GameObject[] pool2;
 
     // Start is called before the first frame update
     void Start()

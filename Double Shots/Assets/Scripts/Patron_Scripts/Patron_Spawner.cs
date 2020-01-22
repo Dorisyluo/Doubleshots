@@ -14,7 +14,7 @@ public class Patron_Spawner : MonoBehaviour
     void Start()
     {
         observer = GameObject.Find("Observer");
-        InvokeRepeating("SpawnPatron", secSpawnTime, secSpawnDelay);
+        StartCoroutine(spawnPatron());
     }
 
     // Update is called once per frame
@@ -23,18 +23,22 @@ public class Patron_Spawner : MonoBehaviour
         chairs = observer.GetComponent<Observer_Data>().openSeats;
         if (chairs.Length <= 0)
         {
-            CancelInvoke("SpawnPatron");
             stopSpawning = true;
         }
-    }
-    public void SpawnPatron()
-    {
-        if (stopSpawning)
+        else
         {
-            CancelInvoke("SpawnPatron");
+            stopSpawning = false;
         }
-        Instantiate(patron, transform.position, transform.rotation);
+    }
+    IEnumerator spawnPatron()
+    {
+        while (!stopSpawning)
+        {
+            Instantiate(patron, transform.position, transform.rotation);
+            yield return new WaitForSeconds(secSpawnDelay);
+        }
         
+        //yield return new WaitForSeconds(secSpawnDelay);
         
     }
 }

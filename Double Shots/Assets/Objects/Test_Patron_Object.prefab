@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5762739855066085963}
   - component: {fileID: 8320766304243953534}
+  - component: {fileID: 5751518896649124485}
+  - component: {fileID: 2163823248221966801}
   m_Layer: 0
   m_Name: Test_Patron_Object
   m_TagString: Patron
@@ -47,6 +49,35 @@ MonoBehaviour:
   chairs: []
   speed: 5
   entered: 0
+--- !u!114 &5751518896649124485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762739855066085959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f25c1c65fd3518448d49befbfa85c15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drinkType: []
+  msPoolPatience: 0
+  msSeatPatience: 0
+  atSeat: 0
+  atPool: 0
+--- !u!114 &2163823248221966801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762739855066085959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a6415cbbbc6ee4d8ba070eea70cc0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7569754368527047478
 GameObject:
   m_ObjectHideFlags: 0
