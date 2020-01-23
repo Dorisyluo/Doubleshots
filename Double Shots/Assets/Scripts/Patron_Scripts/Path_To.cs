@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Move_To : MonoBehaviour
+public class Path_To : MonoBehaviour
 {
 
     public GameObject[] chairs;
