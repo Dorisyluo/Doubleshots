@@ -465,8 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c844e674f2aebd4583af95eecabc03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool1: []
-  pool2: []
 --- !u!114 &1485365605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,6 +747,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1290366808994220997, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290366808994220997, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290366808994220997, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290366808994220997, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290366808994220997, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1290366808994220997, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5904115690631625180, guid: 722b17055f777fc468e57974307da6cd,
         type: 3}
       propertyPath: m_Name
