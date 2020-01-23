@@ -41,6 +41,7 @@ public class Grab : MonoBehaviour
             objectInHand = CollidingObject;
             objectInHand.transform.SetParent(this.transform);
             objectInHand.GetComponent<Rigidbody>().isKinematic = true;
+            objectInHand.GetComponent<Rigidbody>().useGravity = false;
             objectInHand.GetComponent<ShotType>().grabbed = true;
     }
 
@@ -48,7 +49,8 @@ public class Grab : MonoBehaviour
         private void ReleaseObject() //removing parentchild relationship so you drop the object
         {
             objectInHand.GetComponent<Rigidbody>().isKinematic = false;
-            objectInHand.transform.SetParent(null);
+        objectInHand.GetComponent<Rigidbody>().useGravity = true;
+        objectInHand.transform.SetParent(null);
             objectInHand.GetComponent<ShotType>().grabbed = false;
             objectInHand = null;
         }

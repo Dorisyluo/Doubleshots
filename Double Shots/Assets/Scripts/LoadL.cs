@@ -19,12 +19,16 @@ public class LoadL : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Ammo") && other.GetComponent<ShotType>().grabbed == false)
+        if (other.CompareTag("Ammo") && other.GetComponent<ShotType>().grabbed == false && loaded == false)
         {
             loadedShot = other.gameObject;
             loadedShot.transform.parent = gameObject.transform;
+            loadedShot.transform.localPosition = Vector3.zero;
             loadedShot.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            loadedShot.GetComponent<Rigidbody>().useGravity = false;
             loadedShot.GetComponent<CapsuleCollider>().enabled = false;
+            loadedShot.transform.localScale = new Vector3(0.05f, 0.01f, 0.05f);
+            loadedShot.transform.localRotation = Quaternion.Euler(0, 0, 90);
             loaded = true;
         }
     }
