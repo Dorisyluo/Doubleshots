@@ -79,7 +79,7 @@ public drink mixDrink(ingredient one, ingredient two, ingredient three){
 
 	//Searches drink list for list that gives the same ingredients array
 	for(int c = 1; c<menu.length; c++){
-		if(ingredients.Equals(menu[c].getRecipe() == ingredients)){
+		if(ingredients.Equals(menu[c].getRecipe())){
 			return menu[c];
 		}
 	}
