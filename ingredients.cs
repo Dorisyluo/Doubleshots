@@ -1,12 +1,18 @@
 public class ingredient {
 	String name;
+	int index;
 
-	public ingredient (String name){
+	public ingredient (String name, int index){
 		this.name = name;
+		this.index = index;
 	}
 
 	public String getName(){
 		return name;
+	}
+
+	public int getIndex(){
+		return index;
 	}
 }
 
@@ -33,10 +39,10 @@ public class drink {
 public ingredient[] initIngredients(){
 	ingredient[] selection = new ingredient[4]
 
-	ingredient[0] = ingredient("empty");
-	ingredient[1] = ingredient("red"  );
-	ingredient[2] = ingredient("blue" );
-	ingredient[3] = ingredient("green");
+	ingredient[0] = ingredient("empty", 0);
+	ingredient[1] = ingredient("red"  , 1);
+	ingredient[2] = ingredient("blue" , 2);
+	ingredient[3] = ingredient("green", 3);
 
 	return selection;
 }
@@ -56,9 +62,9 @@ public drink[] initDrinks(){
 }
 
 //Assumes menu array is accessible and called menu[]
-public drink mixDrink(int one, int two, int three){
+public drink mixDrink(ingredient one, ingredient two, ingredient three){
 	int temp;
-	int[] ingredients = [one, two, three];
+	int[] ingredients = [one.getIndex(), two.getIndex(), three.getIndex()];
 
 	//Sorts ingredient indeces from least to greatest
 	for(int c = 0; c<3; c++){
