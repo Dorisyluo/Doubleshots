@@ -32,9 +32,13 @@ public class Patron_Spawner : MonoBehaviour
     }
     IEnumerator spawnPatron()
     {
-        while (!stopSpawning)
+        for(; ; )
         {
-            Instantiate(patron, transform.position, transform.rotation);
+            if (!stopSpawning)
+            {
+                Instantiate(patron, transform.position, transform.rotation);
+            }
+            
             yield return new WaitForSeconds(secSpawnDelay);
         }
         

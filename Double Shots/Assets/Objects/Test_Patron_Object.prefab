@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5751518896649124485}
   - component: {fileID: 2163823248221966801}
   - component: {fileID: 8991697652996097787}
+  - component: {fileID: 2425892565517544614}
   m_Layer: 0
   m_Name: Test_Patron_Object
   m_TagString: Patron
@@ -62,9 +63,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f25c1c65fd3518448d49befbfa85c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drinkType: []
-  msPoolPatience: 0
-  msSeatPatience: 0
+  drinkList:
+  - red
+  - blue
+  - green
+  - purple
+  secsSeatPatience: 5
   currentSeat: {fileID: 0}
   atSeat: 0
   atPool: 0
@@ -80,7 +84,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a6415cbbbc6ee4d8ba070eea70cc0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patience: 5
 --- !u!195 &8991697652996097787
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -91,8 +94,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
-  m_Acceleration: 8
+  m_Speed: 8
+  m_Acceleration: 16
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0.01
@@ -103,6 +106,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2425892565517544614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762739855066085959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71a0c652afbf0642bba28ce3c86808d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7964342245966634785
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f53a7de36e4919439d442f5a3384fa9, type: 2}
+  - {fileID: 2100000, guid: a2ee0ea74a1b3234db52fd6f93290662, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

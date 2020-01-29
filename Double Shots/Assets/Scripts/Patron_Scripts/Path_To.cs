@@ -24,7 +24,8 @@ public class Path_To : MonoBehaviour
         chairs = observer.GetComponent<Observer_Data>().openSeats;
         if (chairs.Length > 0)
         {
-            index = Random.Range(0, chairs.Length);
+            index = 0;
+            chairs[index].GetComponent<Occupied>().occupied = true;
         }
         GetComponent<Patron_Data>().currentSeat = chairs[index];
         targetChair = new Vector3(chairs[index].transform.position.x, transform.position.y, chairs[index].transform.position.z);
@@ -51,7 +52,7 @@ public class Path_To : MonoBehaviour
         
         if (Mathf.Abs(transform.position.x - targetChair.x) < 0.01f && Mathf.Abs(transform.position.z - targetChair.z) < 0.01f)
         {
-            chairs[index].GetComponent<Occupied>().occupied = true;
+            
             agent.isStopped = true;
             GetComponent<Patron_Data>().atSeat = true;
         }
