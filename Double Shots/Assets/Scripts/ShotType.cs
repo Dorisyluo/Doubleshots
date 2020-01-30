@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShotType : MonoBehaviour
 {
     public bool grabbed;
+    public int type;
     // Start is called before the first frame update
     void Start()
     {
