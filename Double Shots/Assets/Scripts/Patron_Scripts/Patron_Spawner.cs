@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Patron_Spawner : MonoBehaviour
 {
-    public GameObject patron;
+    public GameObject[] patrons;
     public bool stopSpawning = false;
-    public float secSpawnTime;
     public float secSpawnDelay;
     public GameObject[] chairs;
     private GameObject observer;
+    private int choice;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +36,8 @@ public class Patron_Spawner : MonoBehaviour
         {
             if (!stopSpawning)
             {
-                Instantiate(patron, transform.position, transform.rotation);
+                choice = Random.Range(0,patrons.Length);
+                Instantiate(patrons[choice], transform.position, transform.rotation);
             }
             
             yield return new WaitForSeconds(secSpawnDelay);

@@ -136,8 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2b4a897fae95b49a638c60bee9784e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patron: {fileID: 0}
+  patrons:
+  - {fileID: 8029443285300013554, guid: d53a3ab629de89b45a98290fed930b7a, type: 3}
+  - {fileID: 2735716691845685355, guid: f475385ef97579240a9ff7ce390336bb, type: 3}
+  - {fileID: 886401697485682586, guid: 772236a99085a6f418254b72d76bd108, type: 3}
   stopSpawning: 0
-  secSpawnTime: 0
-  secSpawnDelay: 0
+  secSpawnDelay: 2
   chairs: []

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Patron_Data : MonoBehaviour
 {
-    public string[] drinkList = {"red", "blue", "green", "purple" };
+    public string wantedDrink;
     //set this value in editor
     public float secsSeatPatience;
     public GameObject currentSeat;
