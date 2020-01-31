@@ -29,6 +29,7 @@ public class Path_To : MonoBehaviour
         }
         GetComponent<Patron_Data>().currentSeat = chairs[index];
         targetChair = new Vector3(chairs[index].transform.position.x, transform.position.y, chairs[index].transform.position.z);
+        agent.speed = GetComponent<Patron_Data>().speed;
 
     }
 

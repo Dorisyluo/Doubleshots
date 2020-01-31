@@ -10,4 +10,5 @@ public class Patron_Data : MonoBehaviour
     public GameObject currentSeat;
     public bool atSeat;
     public bool atPool;
+    public float speed;
 }

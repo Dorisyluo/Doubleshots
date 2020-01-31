@@ -53,6 +53,7 @@ MonoBehaviour:
   currentSeat: {fileID: 0}
   atSeat: 0
   atPool: 0
+  speed: 8
 --- !u!114 &7629100347081647818
 MonoBehaviour:
   m_ObjectHideFlags: 0
