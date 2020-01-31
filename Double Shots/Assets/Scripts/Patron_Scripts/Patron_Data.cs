@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Patron_Data : MonoBehaviour
 {
-    public string[] drinkType;
-    public float msPoolPatience;
-    public float msSeatPatience;
+    public string wantedDrink;
+    //set this value in editor
+    public float secsSeatPatience;
     public GameObject currentSeat;
     public bool atSeat;
     public bool atPool;
+    public float speed;
 }

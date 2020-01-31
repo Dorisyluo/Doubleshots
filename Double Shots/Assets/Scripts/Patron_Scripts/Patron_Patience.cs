@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Patron_Patience : MonoBehaviour
 {
-    public float patience = 5;
+    private float patience;
     // Start is called before the first frame update
     void Start()
     {
-        
+        patience = GetComponent<Patron_Data>().secsSeatPatience;
     }
 
     // Update is called once per frame
