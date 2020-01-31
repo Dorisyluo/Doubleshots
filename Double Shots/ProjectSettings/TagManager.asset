@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Seat
+  - Door
+  - Patron
   - Ammo
   layers:
   - Default
