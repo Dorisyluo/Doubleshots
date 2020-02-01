@@ -27,7 +27,7 @@ public class Patron_Collide : MonoBehaviour
     }
 
     //doesn't need to be put into update
-    private void OnCollisionEnter (Collision ammoCol)
+    private void OnTriggerStay(UnityEngine.Collider ammoCol)
     {
         //grab colision object
         collideObject = ammoCol.gameObject;
