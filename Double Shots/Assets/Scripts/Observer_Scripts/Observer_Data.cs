@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Observer_Data : MonoBehaviour
 {
@@ -10,4 +11,6 @@ public class Observer_Data : MonoBehaviour
     public bool barFull;
     public int barCapacity;
     public GameObject[] openSeats;
+    public int score;
+    public TextMeshPro board;
 }
