@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 9101558131887996487}
   - component: {fileID: 2011743980868994203}
   - component: {fileID: 254655216033307395}
+  - component: {fileID: 7180967006716192400}
   m_Layer: 0
   m_Name: Red_Patron
   m_TagString: Untagged
@@ -207,3 +208,16 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &7180967006716192400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029443285300013554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.02, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

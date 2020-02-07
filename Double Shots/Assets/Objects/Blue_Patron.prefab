@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 528148214301316772}
   - component: {fileID: 8020786573412920853}
   - component: {fileID: 8009178232145222616}
+  - component: {fileID: 7932834600390563703}
   m_Layer: 0
   m_Name: Blue_Patron
   m_TagString: Untagged
@@ -115,6 +116,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &7932834600390563703
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886401697485682586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.92, z: 1}
+  m_Center: {x: 0, y: 1.05, z: 0}
 --- !u!1 &3745841234857773926
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +140,6 @@ GameObject:
   - component: {fileID: 3469655423612625929}
   - component: {fileID: 7300640696500326335}
   - component: {fileID: 8503736773742650671}
-  - component: {fileID: 1393826403526143000}
   - component: {fileID: 627317595519760896}
   m_Layer: 0
   m_Name: Cube
@@ -195,19 +208,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1393826403526143000
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3745841234857773926}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &627317595519760896
 MonoBehaviour:
   m_ObjectHideFlags: 0
