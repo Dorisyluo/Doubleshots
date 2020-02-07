@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Seat
+  - Door
+  - Patron
   - Ammo
+  - Projectile
   layers:
   - Default
   - TransparentFX
