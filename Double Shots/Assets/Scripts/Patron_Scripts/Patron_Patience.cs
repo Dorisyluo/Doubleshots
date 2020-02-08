@@ -14,7 +14,7 @@ public class Patron_Patience : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<Patron_Data>().atSeat)
+        if (GetComponent<Patron_Data>().atSeat && !GetComponent<Patron_Data>().isSatisfied)
         {
             patience -= Time.deltaTime;
         }
@@ -28,6 +28,7 @@ public class Patron_Patience : MonoBehaviour
         if (patience <= 0)
         {
             GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
+            GetComponent<Patron_Data>().isHostile = true;
             Destroy(gameObject);
         }
     }

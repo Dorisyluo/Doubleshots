@@ -55,6 +55,8 @@ MonoBehaviour:
   atSeat: 0
   atPool: 0
   speed: 12
+  isSatisfied: 0
+  isHostile: 0
 --- !u!114 &7943529359015154431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +228,5 @@ MonoBehaviour:
   atSeat: 0
   atPool: 0
   speed: 0
+  isSatisfied: 0
+  isHostile: 0
