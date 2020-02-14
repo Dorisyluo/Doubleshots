@@ -22,6 +22,15 @@ public class Patron_Collide : MonoBehaviour
             case "blue":
                 typeCompare = 3;
                 break;
+            case "yellow":
+                typeCompare = 4;
+                break;
+            case "pink":
+                typeCompare = 5;
+                break;
+            case "teal":
+                typeCompare = 6;
+                break;
             default:
                 typeCompare = -1;
                 break;
