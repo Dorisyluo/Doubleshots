@@ -9,6 +9,7 @@ TagManager:
   - Patron
   - Ammo
   - Projectile
+  - Enemy_Projectile
   layers:
   - Default
   - TransparentFX

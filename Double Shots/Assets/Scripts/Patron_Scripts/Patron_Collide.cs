@@ -41,15 +41,16 @@ public class Patron_Collide : MonoBehaviour
             
             if(collideObject.GetComponent<ShotType>().type == typeCompare && !GetComponent<Patron_Data>().isSatisfied)
             {
+                //sound here maybe
                 observer.GetComponent<Observer_Data>().score += 10;
                 GetComponent<Patron_Data>().isSatisfied = true;
-                Debug.Log("Patron Satisfied");
             }
             else
             {
+                //sound here maybe
+                //sound here maybe
                 observer.GetComponent<Observer_Data>().score -= 10;
                 GetComponent<Patron_Data>().isHostile = true;
-                Debug.Log("Oops");
             }
             Destroy(collideObject);
 

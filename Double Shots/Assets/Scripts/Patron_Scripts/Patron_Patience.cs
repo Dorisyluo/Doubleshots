@@ -7,6 +7,7 @@ public class Patron_Patience : MonoBehaviour
     private float patience;
     public GameObject patienceUI;
     public Slider patienceSilder;
+    public float wait;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +35,19 @@ public class Patron_Patience : MonoBehaviour
     {
         if (patience <= 0)
         {
-            GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
-            GetComponent<Patron_Data>().isHostile = true;
-            Destroy(gameObject);
+                
+            wait -= Time.deltaTime;
+            if(wait <= 0)
+            {
+                //Sound/Voice Line here
+                GetComponent<Patron_Data>().isHostile = true;  
+            }
+            if(wait <= -2f)
+            {
+                GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
+                Destroy(gameObject);
+            }
+            
         }
     }
 }
