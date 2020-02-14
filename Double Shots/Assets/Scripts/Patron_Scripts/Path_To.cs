@@ -44,17 +44,24 @@ public class Path_To : MonoBehaviour
         {
             moveToSeat();
         }
-
-
+        if (GetComponent<Patron_Data>().isSatisfied)
+        {
+            exit();
+        }
     }
     void moveToSeat()
     {
-       
-        
         if (Mathf.Abs(transform.position.x - targetChair.x) < 0.01f && Mathf.Abs(transform.position.z - targetChair.z) < 0.01f)
         {
+            if (!GetComponent<Patron_Data>().isSatisfied)
+            {
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.isStopped = false;
+            }
             
-            agent.isStopped = true;
             GetComponent<Patron_Data>().atSeat = true;
         }
 
@@ -71,6 +78,16 @@ public class Path_To : MonoBehaviour
         if (Mathf.Abs(transform.position.x - doorLocation.x) < 0.01f && Mathf.Abs(transform.position.z - doorLocation.z) < 0.01f)
         {
             entered = true;
+        }
+    }
+
+    void exit()
+    {
+        agent.SetDestination(doorLocation);
+        if (Mathf.Abs(transform.position.x - doorLocation.x) < 0.01f && Mathf.Abs(transform.position.z - doorLocation.z) < 0.01f)
+        {     
+            GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
+            Destroy(gameObject);
         }
     }
 }

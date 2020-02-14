@@ -11,4 +11,6 @@ public class Patron_Data : MonoBehaviour
     public bool atSeat;
     public bool atPool;
     public float speed;
+    public bool isSatisfied;
+    public bool isHostile;
 }
