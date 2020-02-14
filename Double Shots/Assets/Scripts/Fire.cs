@@ -8,6 +8,9 @@ public class Fire : MonoBehaviour
     public GameObject shotR;
     public GameObject shotG;
     public GameObject shotB;
+    public GameObject shotY;
+    public GameObject shotP;
+    public GameObject shotT;
     public GameObject Load;
     private Load Loader;
     private bool fired;
@@ -35,14 +38,33 @@ public class Fire : MonoBehaviour
                 {
                     projectile = shotG;
                 }
-                else 
+                else if (projType == 3)
                 {
                     projectile = shotB;
+                }
+                else if (projType == 4)
+                {
+                    projectile = shotY;
+
+                }
+                else if (projType == 5)
+                {
+                    projectile = shotP;
+                }
+                else if (projType == 6)
+                {
+                    projectile = shotT;
                 }
                 GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
                 bullet.GetComponent<Rigidbody>().AddForce(transform.right * -1000);
                 Loader.loadedL = false;
                 Destroy(Loader.loadedShotL);
+
+                if(projType == 4 || projType == 5 || projType == 6)
+                {
+                    Loader.loadedR = false;
+                    Destroy(Loader.loadedShotR);
+                }
             }
             else if(Loader.loadedR){
                 int projType = Loader.loadedShotR.GetComponent<ShotType>().type;
