@@ -535,6 +535,9 @@ MonoBehaviour:
   R: {fileID: 1334173472}
   HighL: {fileID: 1015798685}
   HighR: {fileID: 1368215196}
+  Y: {fileID: 0}
+  P: {fileID: 0}
+  T: {fileID: 0}
 --- !u!65 &301973259
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1590,6 +1593,9 @@ MonoBehaviour:
   shotR: {fileID: 5010864577066962087, guid: 8041a148d61373641b341377c13bdf76, type: 3}
   shotG: {fileID: 5010864577066962087, guid: 4b2e3fbbd7730174290f12afa655c7ad, type: 3}
   shotB: {fileID: 5010864577066962087, guid: 3c3d577e614cdc8408c37638ea3df34c, type: 3}
+  shotY: {fileID: 0}
+  shotP: {fileID: 0}
+  shotT: {fileID: 0}
   Load: {fileID: 301973257}
 --- !u!1001 &1784957289
 PrefabInstance:

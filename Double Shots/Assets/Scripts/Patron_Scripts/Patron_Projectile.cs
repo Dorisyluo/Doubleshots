@@ -13,7 +13,7 @@ public class Patron_Projectile : MonoBehaviour
     void Start()
     {
         observer = GameObject.Find("Observer");
-        player = GameObject.Find("OVRPlayerController (1)");
+        player = GameObject.FindGameObjectsWithTag("Player")[0];
         playerPosition = player.transform;
     }
 
