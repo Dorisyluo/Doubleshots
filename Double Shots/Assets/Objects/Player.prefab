@@ -1402,7 +1402,6 @@ GameObject:
   - component: {fileID: 6798328887462196730}
   - component: {fileID: 6798328887462196731}
   - component: {fileID: 6798328887462196728}
-  - component: {fileID: -1448452602540722868}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1499,14 +1498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71d1996d67004241a3b69960856ffcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &-1448452602540722868
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6798328887462196734}
-  m_Enabled: 1
 --- !u!1 &6798328887497473082
 GameObject:
   m_ObjectHideFlags: 0
