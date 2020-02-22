@@ -18,6 +18,8 @@ public class Path_To : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         door = GameObject.Find("Entrance");
         observer = GameObject.Find("Observer");
         doorLocation = new Vector3(door.transform.position.x, transform.position.y, door.transform.position.z);
