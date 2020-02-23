@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 3244802483460082368, guid: 7ed21fc6373b9e44183335aab7f91f91,
         type: 3}
       propertyPath: speed
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3533305157150124796, guid: 7ed21fc6373b9e44183335aab7f91f91,
         type: 3}
@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 8277551656879091860, guid: 7ed21fc6373b9e44183335aab7f91f91,
         type: 3}
       propertyPath: m_Name
-      value: Red_Patron Variant 1
+      value: Teal_Patron
       objectReference: {fileID: 0}
     - target: {fileID: 8867167296214387721, guid: 7ed21fc6373b9e44183335aab7f91f91,
         type: 3}

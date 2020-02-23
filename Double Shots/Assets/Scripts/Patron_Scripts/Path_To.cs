@@ -53,7 +53,39 @@ public class Path_To : MonoBehaviour
     }
     void moveToSeat()
     {
-        if (Mathf.Abs(transform.position.x - targetChair.x) < 0.01f && Mathf.Abs(transform.position.z - targetChair.z) < 0.01f)
+       if (chairs.Length > 0)
+       {
+            agent.SetDestination(targetChair);
+       }
+    }
+
+    void moveToDoor()
+    {
+        agent.SetDestination(doorLocation);
+
+    }
+
+    void exit()
+    {
+        agent.SetDestination(doorLocation);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject colObj = other.gameObject;
+        if (colObj.tag == "Door")
+        {
+            if (!entered)
+            {
+                entered = true;
+            }
+            if (entered && GetComponent<Patron_Data>().isSatisfied)
+            {
+                GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
+                Destroy(gameObject);
+            }
+        }
+
+        if (colObj.tag == "Seat")
         {
             if (!GetComponent<Patron_Data>().isSatisfied)
             {
@@ -63,33 +95,9 @@ public class Path_To : MonoBehaviour
             {
                 agent.isStopped = false;
             }
-            
+
             GetComponent<Patron_Data>().atSeat = true;
         }
 
-       else if (chairs.Length > 0)
-        {
-            agent.SetDestination(targetChair);
-        }
-    }
-
-    void moveToDoor()
-    {
-        agent.SetDestination(doorLocation);
-
-        if (Mathf.Abs(transform.position.x - doorLocation.x) < 0.01f && Mathf.Abs(transform.position.z - doorLocation.z) < 0.01f)
-        {
-            entered = true;
-        }
-    }
-
-    void exit()
-    {
-        agent.SetDestination(doorLocation);
-        if (Mathf.Abs(transform.position.x - doorLocation.x) < 0.01f && Mathf.Abs(transform.position.z - doorLocation.z) < 0.01f)
-        {     
-            GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
-            Destroy(gameObject);
-        }
     }
 }
