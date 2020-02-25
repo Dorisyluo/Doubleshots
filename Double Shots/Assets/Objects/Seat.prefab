@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6698744674455808103}
   - component: {fileID: 6700384598979855599}
+  - component: {fileID: 8906279913888301823}
   m_Layer: 0
   m_Name: Seat
   m_TagString: Seat
@@ -45,6 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   occupied: 0
+--- !u!65 &8906279913888301823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875577173431917300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85, y: 0.57, z: 0.65}
+  m_Center: {x: 0, y: 0.37, z: 0}
 --- !u!1 &8317707705955550267
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +70,6 @@ GameObject:
   - component: {fileID: 2553540401218939656}
   - component: {fileID: 3951244607807147444}
   - component: {fileID: 1823137771057526062}
-  - component: {fileID: 3428710758342863471}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -124,17 +137,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3428710758342863471
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8317707705955550267}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
