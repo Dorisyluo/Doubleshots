@@ -8,6 +8,13 @@ public class Patron_Shoot : MonoBehaviour
     public GameObject projectile;
     private bool notShot = true;
     private GameObject bullet;
+
+    AudioSource gunShot;
+
+    void Start()
+    {
+        gunShot = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -15,9 +22,9 @@ public class Patron_Shoot : MonoBehaviour
         {
             if (notShot)
             {
-                //Sound here prob
-                Vector3 shoot = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-                bullet = Instantiate(projectile, shoot, Quaternion.identity) as GameObject;
+               gunShot.PlayOneShot(gunShot.clip, 0.7f);
+               Vector3 shoot = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+               bullet = Instantiate(projectile, shoot, Quaternion.identity) as GameObject;
             }
             notShot = false;
 

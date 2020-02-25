@@ -492,6 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71a0c652afbf0642bba28ce3c86808d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctOrder: {fileID: 8300000, guid: 4055ee036380f8841a4128bf5536d8e5, type: 3}
+  wrongOrder: {fileID: 8300000, guid: 9fd72ae5bedff6d4cadd756043953f49, type: 3}
 --- !u!195 &2832290132269594405
 NavMeshAgent:
   m_ObjectHideFlags: 0

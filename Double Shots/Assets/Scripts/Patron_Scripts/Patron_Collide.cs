@@ -7,7 +7,10 @@ public class Patron_Collide : MonoBehaviour
     private GameObject collideObject;
     private int typeCompare;
     private GameObject observer;
-    // Update is called once per frame
+
+    AudioSource audioSource;
+    public AudioClip correctOrder, wrongOrder;
+
     private void Start()
     {
         observer = GameObject.Find("Observer");
@@ -35,6 +38,8 @@ public class Patron_Collide : MonoBehaviour
                 typeCompare = -1;
                 break;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     //doesn't need to be put into update
@@ -50,16 +55,17 @@ public class Patron_Collide : MonoBehaviour
             
             if(collideObject.GetComponent<ShotType>().type == typeCompare && !GetComponent<Patron_Data>().isSatisfied)
             {
-                //sound here maybe
+                
                 observer.GetComponent<Observer_Data>().score += 10;
                 GetComponent<Patron_Data>().isSatisfied = true;
+                audioSource.PlayOneShot(correctOrder, 0.75f);
             }
             else
             {
-                //sound here maybe
-                //sound here maybe
+                
                 observer.GetComponent<Observer_Data>().score -= 10;
                 GetComponent<Patron_Data>().isHostile = true;
+                audioSource.PlayOneShot(wrongOrder, 0.75f);
             }
             Destroy(collideObject);
 
