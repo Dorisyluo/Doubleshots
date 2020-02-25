@@ -427,7 +427,6 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-
   - component: {fileID: 633984667389716256}
   - component: {fileID: 8161281354220161132}
   - component: {fileID: 6090049607761930637}
@@ -437,7 +436,6 @@ GameObject:
   - component: {fileID: 779307452053531420}
   - component: {fileID: 1466439403559362208}
   - component: {fileID: 4227235978119928635}
-
   m_Layer: 0
   m_Name: Red_Patron
   m_TagString: Untagged
@@ -524,9 +522,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71a0c652afbf0642bba28ce3c86808d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
+  correctOrder: {fileID: 8300000, guid: 4055ee036380f8841a4128bf5536d8e5, type: 3}
+  wrongOrder: {fileID: 8300000, guid: 9fd72ae5bedff6d4cadd756043953f49, type: 3}
 --- !u!195 &24726868497436685
-
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,9 +589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 4934320666721196641, guid: c66955e0f518946468674e306938eeb9,
     type: 3}
-
 --- !u!1 &3839562625791955655
-
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
