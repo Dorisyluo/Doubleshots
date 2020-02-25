@@ -22,9 +22,9 @@ public class Patron_Shoot : MonoBehaviour
         {
             if (notShot)
             {
-                //Sound here prob
                gunShot.PlayOneShot(gunShot.clip, 0.7f);
-                bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+               Vector3 shoot = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+               bullet = Instantiate(projectile, shoot, Quaternion.identity) as GameObject;
             }
             notShot = false;
 
