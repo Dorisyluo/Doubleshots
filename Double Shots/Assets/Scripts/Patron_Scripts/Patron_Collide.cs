@@ -22,6 +22,15 @@ public class Patron_Collide : MonoBehaviour
             case "blue":
                 typeCompare = 3;
                 break;
+            case "yellow":
+                typeCompare = 4;
+                break;
+            case "pink":
+                typeCompare = 5;
+                break;
+            case "teal":
+                typeCompare = 6;
+                break;
             default:
                 typeCompare = -1;
                 break;
@@ -39,15 +48,18 @@ public class Patron_Collide : MonoBehaviour
 
         if(collideObject.tag == "Projectile"){
             
-            if(collideObject.GetComponent<ShotType>().type == typeCompare)
+            if(collideObject.GetComponent<ShotType>().type == typeCompare && !GetComponent<Patron_Data>().isSatisfied)
             {
+                //sound here maybe
                 observer.GetComponent<Observer_Data>().score += 10;
-                Debug.Log("Patron Satisfied");
+                GetComponent<Patron_Data>().isSatisfied = true;
             }
             else
             {
+                //sound here maybe
+                //sound here maybe
                 observer.GetComponent<Observer_Data>().score -= 10;
-                Debug.Log("Oops");
+                GetComponent<Patron_Data>().isHostile = true;
             }
             Destroy(collideObject);
 

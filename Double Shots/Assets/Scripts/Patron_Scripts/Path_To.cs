@@ -18,6 +18,8 @@ public class Path_To : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         door = GameObject.Find("Entrance");
         observer = GameObject.Find("Observer");
         doorLocation = new Vector3(door.transform.position.x, transform.position.y, door.transform.position.z);
@@ -44,33 +46,75 @@ public class Path_To : MonoBehaviour
         {
             moveToSeat();
         }
+        if (GetComponent<Patron_Data>().isSatisfied)
+        {
+            exit();
+
+        }
+
+        if (GetComponent<Patron_Data>().atSeat)
+        {
+            roatateTowards(GameObject.Find("Player").transform.position);
+        }
 
 
     }
     void moveToSeat()
     {
-       
-        
-        if (Mathf.Abs(transform.position.x - targetChair.x) < 0.01f && Mathf.Abs(transform.position.z - targetChair.z) < 0.01f)
-        {
-            
-            agent.isStopped = true;
-            GetComponent<Patron_Data>().atSeat = true;
-        }
-
-       else if (chairs.Length > 0)
-        {
+       if (chairs.Length > 0)
+       {
             agent.SetDestination(targetChair);
-        }
+       }
     }
 
     void moveToDoor()
     {
         agent.SetDestination(doorLocation);
 
-        if (Mathf.Abs(transform.position.x - doorLocation.x) < 0.01f && Mathf.Abs(transform.position.z - doorLocation.z) < 0.01f)
-        {
-            entered = true;
-        }
     }
+
+    void exit()
+    {
+        GetComponent<Patron_Data>().atSeat = false;
+        agent.SetDestination(doorLocation);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject colObj = other.gameObject;
+        if (colObj.tag == "Door")
+        {
+            if (!entered)
+            {
+                entered = true;
+            }
+            if (entered && GetComponent<Patron_Data>().isSatisfied)
+            {
+                GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
+                Destroy(gameObject);
+            }
+        }
+
+        if (colObj.tag == "Seat")
+        {
+            if (!GetComponent<Patron_Data>().isSatisfied)
+            {
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.isStopped = false;
+            }
+
+            GetComponent<Patron_Data>().atSeat = true;
+        }
+
+    }
+    void roatateTowards(Vector3 obj)
+    {
+        Quaternion lookRot = Quaternion.LookRotation((obj-transform.position).normalized);
+        //lookRot.y = transform.position.y;
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 4);
+    }
+
+
 }

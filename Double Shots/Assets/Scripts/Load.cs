@@ -12,12 +12,10 @@ public class Load : MonoBehaviour
     public GameObject R;
     public GameObject HighL;
     public GameObject HighR;
+    public Material Y;
+    public Material P;
+    public Material T;
     private GameObject loadedShot;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -63,6 +61,7 @@ public class Load : MonoBehaviour
                 loadedShot = other.gameObject;
                 loadedShot.transform.localPosition = Vector3.zero;
                 loadedShot.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                loadedShot.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 loadedShot.GetComponent<Rigidbody>().useGravity = false;
                 loadedShot.gameObject.GetComponent<CapsuleCollider>().enabled = false;
                 loadedShot.transform.localScale = new Vector3(0.05f, 0.01f, 0.05f);
@@ -74,5 +73,35 @@ public class Load : MonoBehaviour
     {
         HighL.GetComponent<MeshRenderer>().enabled = false;
         HighR.GetComponent<MeshRenderer>().enabled = false;
+    }
+
+    public void Mix()
+    {
+        if(loadedL && loadedR)
+        {
+            int Ltype = loadedShotL.GetComponent<ShotType>().type;
+            int Rtype = loadedShotR.GetComponent<ShotType>().type;
+
+            if ((Ltype == 1 || Rtype == 1) && (Ltype == 2 || Rtype == 2))
+            {
+                loadedShotL.GetComponent<ShotType>().type = 4;
+                loadedShotL.GetComponent<Renderer>().material = Y;
+                loadedShotR.GetComponent<Renderer>().material = Y;
+
+            }
+            if ((Ltype == 1 || Rtype == 1) && (Ltype == 3 || Rtype == 3))
+            {
+                loadedShotL.GetComponent<ShotType>().type = 5;
+                loadedShotL.GetComponent<Renderer>().material = P;
+                loadedShotR.GetComponent<Renderer>().material = P;
+            }
+            if ((Ltype == 3 || Rtype == 3) && (Ltype == 2 || Rtype == 2))
+            {
+                loadedShotL.GetComponent<ShotType>().type = 6;
+                loadedShotL.GetComponent<Renderer>().material = T;
+                loadedShotR.GetComponent<Renderer>().material = T;
+            }
+        }
+
     }
 }
