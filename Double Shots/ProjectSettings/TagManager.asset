@@ -10,6 +10,7 @@ TagManager:
   - Ammo
   - Projectile
   - Handle
+  - CollisionRange
   layers:
   - Default
   - TransparentFX
