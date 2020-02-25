@@ -49,7 +49,15 @@ public class Path_To : MonoBehaviour
         if (GetComponent<Patron_Data>().isSatisfied)
         {
             exit();
+
         }
+
+        if (GetComponent<Patron_Data>().atSeat)
+        {
+            roatateTowards(GameObject.Find("Player").transform.position);
+        }
+
+
     }
     void moveToSeat()
     {
@@ -67,6 +75,7 @@ public class Path_To : MonoBehaviour
 
     void exit()
     {
+        GetComponent<Patron_Data>().atSeat = false;
         agent.SetDestination(doorLocation);
     }
     private void OnTriggerEnter(Collider other)
@@ -100,4 +109,12 @@ public class Path_To : MonoBehaviour
         }
 
     }
+    void roatateTowards(Vector3 obj)
+    {
+        Quaternion lookRot = Quaternion.LookRotation((obj-transform.position).normalized);
+        //lookRot.y = transform.position.y;
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRot, Time.deltaTime * 4);
+    }
+
+
 }
