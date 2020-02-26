@@ -47,10 +47,11 @@ public class Grab : MonoBehaviour
         else
         {
             objectInHand = CollidingObject;
+            objectInHand.GetComponent<ShotType>().grabbed = true;
             objectInHand.transform.SetParent(this.transform);
             objectInHand.GetComponent<Rigidbody>().isKinematic = true;
             objectInHand.GetComponent<Rigidbody>().useGravity = false;
-            objectInHand.GetComponent<ShotType>().grabbed = true;
+            
         }
 
     }
@@ -66,10 +67,10 @@ public class Grab : MonoBehaviour
         }
         else
         {
+            objectInHand.GetComponent<ShotType>().grabbed = false;
             objectInHand.GetComponent<Rigidbody>().isKinematic = false;
             objectInHand.GetComponent<Rigidbody>().useGravity = true;
-            objectInHand.transform.SetParent(null);
-            objectInHand.GetComponent<ShotType>().grabbed = false;
+            objectInHand.transform.SetParent(null);            
             objectInHand = null;
         }
 
