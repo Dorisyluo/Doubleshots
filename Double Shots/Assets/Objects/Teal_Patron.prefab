@@ -131,8 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f25c1c65fd3518448d49befbfa85c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedDrink: green
-  secsSeatPatience: 10
+  wantedDrink: teal
+  secsSeatPatience: 20
   speed: 7
   currentSeat: {fileID: 0}
   atSeat: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   R: 0
   G: 1
-  B: 0
+  B: 1
 --- !u!1 &5663300281436012056
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   R: 0
   G: 1
-  B: 0
+  B: 1
 --- !u!1 &7072187789500603437
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +924,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

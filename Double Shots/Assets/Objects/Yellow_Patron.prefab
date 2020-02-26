@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f25c1c65fd3518448d49befbfa85c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedDrink: green
-  secsSeatPatience: 10
+  wantedDrink: yellow
+  secsSeatPatience: 22
   speed: 7
   currentSeat: {fileID: 0}
   atSeat: 0
@@ -497,7 +497,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1270dc2c47a314fb66db6f565216d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  R: 0
+  R: 1
   G: 1
   B: 0
 --- !u!1 &7303869094886093198
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1270dc2c47a314fb66db6f565216d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  R: 0
+  R: 1
   G: 1
   B: 0
 --- !u!1 &8037600445295405586

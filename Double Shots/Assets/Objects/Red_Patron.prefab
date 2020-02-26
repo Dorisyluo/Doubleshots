@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1270dc2c47a314fb66db6f565216d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  R: 0
-  G: 1
+  R: 1
+  G: 0
   B: 0
 --- !u!1 &1981540673996025246
 GameObject:
@@ -343,8 +343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1270dc2c47a314fb66db6f565216d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  R: 0
-  G: 1
+  R: 1
+  G: 0
   B: 0
 --- !u!1 &3592089063579887161
 GameObject:
@@ -472,9 +472,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f25c1c65fd3518448d49befbfa85c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wantedDrink: green
-  secsSeatPatience: 10
-  speed: 7
+  wantedDrink: red
+  secsSeatPatience: 6
+  speed: 5
   currentSeat: {fileID: 0}
   atSeat: 0
   atPool: 0
@@ -921,7 +921,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
