@@ -10,11 +10,13 @@ public class Patron_Spawner : MonoBehaviour
     public float initialDelay;
     public GameObject[] chairs;
     private GameObject observer;
+    private GameObject timer;
     private int choice;
     // Start is called before the first frame update
     void Start()
     {
         observer = GameObject.Find("Observer");
+        timer = GameObject.Find("Timer");
         StartCoroutine(spawnPatron());
     }
 
@@ -23,7 +25,7 @@ public class Patron_Spawner : MonoBehaviour
     {
         initialDelay -= Time.deltaTime;
         chairs = observer.GetComponent<Observer_Data>().openSeats;
-        if (chairs.Length <= 0)
+        if (chairs.Length <= 0 || timer.GetComponent<Countdown>().timesUp)
         {
             stopSpawning = true;
         }
