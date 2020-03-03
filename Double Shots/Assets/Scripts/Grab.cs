@@ -8,6 +8,13 @@ public class Grab : MonoBehaviour
     public GameObject objectInHand;
     public Transform gripTrans;
 
+    AudioSource audioSource;
+
+    public void start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ammo") || other.gameObject.CompareTag("Pump"))
@@ -44,6 +51,11 @@ public class Grab : MonoBehaviour
             objectInHand = CollidingObject;
             gameObject.AddComponent<FixedJoint>();
             gameObject.GetComponent<FixedJoint>().connectedBody = CollidingObject.GetComponent<Rigidbody>();
+        }
+        else if (CollidingObject.CompareTag("Ammo"))
+        {
+            //Check to see if this is not called every frame
+            audioSource.PlayOneShot(audioSource.clip, 0.7f);
         }
         else
         {

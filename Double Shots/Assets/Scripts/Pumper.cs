@@ -9,6 +9,8 @@ public class Pumper : MonoBehaviour
     private bool flagD;
     private int pumps;
     public GameObject Load;
+
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,8 @@ public class Pumper : MonoBehaviour
         pU = false;
         flagD = false;
         pumps = 0;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class Pumper : MonoBehaviour
             {
                 pumps++;
                 flagD = true;
+                audioSource.PlayOneShot(audioSource.clip, 0.7f);
             }
             if (pU && flagD == true)
             {
