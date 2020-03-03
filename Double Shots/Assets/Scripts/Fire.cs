@@ -14,12 +14,16 @@ public class Fire : MonoBehaviour
     public GameObject Load;
     private Load Loader;
     private bool fired;
+
+    AudioSource gunShot;
+    public AudioClip emptyGun;
     // Start is called before the first frame update
     void Start()
     {
         Loader = Load.GetComponent<Load>();
         fired = false;
 
+        gunShot = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +59,8 @@ public class Fire : MonoBehaviour
                 {
                     projectile = shotT;
                 }
+
+                gunShot.PlayOneShot(gunShot.clip, 0.7f);
                 GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
                 bullet.GetComponent<Rigidbody>().AddForce(transform.right * -1000);
                 Loader.loadedL = false;
@@ -80,6 +86,8 @@ public class Fire : MonoBehaviour
                 {
                     projectile = shotB;
                 }
+
+                gunShot.PlayOneShot(gunShot.clip, 0.7f);
                 GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
                 bullet.GetComponent<Rigidbody>().AddForce(transform.right * -1000);
                 Loader.loadedR = false;
@@ -88,6 +96,7 @@ public class Fire : MonoBehaviour
             else
             {
                 //play gun clicking sound
+                gunShot.PlayOneShot(emptyGun, 0.7f);
             }            
         }
         if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) < 0.1f && fired !=false)

@@ -6,6 +6,7 @@ public class Grab : MonoBehaviour
 {
     public GameObject CollidingObject;
     public GameObject objectInHand;
+    public Transform gripTrans;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -47,10 +48,13 @@ public class Grab : MonoBehaviour
         else
         {
             objectInHand = CollidingObject;
-            objectInHand.transform.SetParent(this.transform);
+            objectInHand.GetComponent<ShotType>().grabbed = true;
+            objectInHand.transform.SetParent(gripTrans);
+            objectInHand.transform.localPosition = new Vector3(0, 0, 0);
+            objectInHand.transform.localRotation = Quaternion.Euler(0, -30, 90);
             objectInHand.GetComponent<Rigidbody>().isKinematic = true;
             objectInHand.GetComponent<Rigidbody>().useGravity = false;
-            objectInHand.GetComponent<ShotType>().grabbed = true;
+            
         }
 
     }
@@ -66,10 +70,10 @@ public class Grab : MonoBehaviour
         }
         else
         {
+            objectInHand.GetComponent<ShotType>().grabbed = false;
             objectInHand.GetComponent<Rigidbody>().isKinematic = false;
             objectInHand.GetComponent<Rigidbody>().useGravity = true;
-            objectInHand.transform.SetParent(null);
-            objectInHand.GetComponent<ShotType>().grabbed = false;
+            objectInHand.transform.SetParent(null);            
             objectInHand = null;
         }
 
