@@ -19,7 +19,7 @@ public class ShotType : MonoBehaviour
     {
         if(grabbed && !spawned)
         {
-            Instantiate(this.gameObject, new Vector3(Random.Range(-1f,1f),1.05f,-16f), Quaternion.identity);
+            Instantiate(this.gameObject, new Vector3(Random.Range(-1f,1f),1.35f,-16f), Quaternion.identity);
             spawned = true;
         }else if(!grabbed && spawned)
         {
