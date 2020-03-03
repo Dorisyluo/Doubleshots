@@ -5,9 +5,21 @@ using UnityEngine;
 public class CrankGrabTracker : MonoBehaviour
 {
 	public bool isGrabbed;
+	public bool releaseMe;
+	public Rigidbody mRigid;
 
 	void start()
 	{
-		isGrabbed = false;
+		mRigid.constraints = RigidbodyConstraints.None;
+	}
+
+	void Update()
+	{
+		if (isGrabbed){
+			mRigid.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+		} else 
+		{
+			mRigid.constraints = RigidbodyConstraints.FreezePositionZ;
+		}
 	}
 }
