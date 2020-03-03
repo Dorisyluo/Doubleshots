@@ -43,7 +43,7 @@ public class Patron_Collide : MonoBehaviour
     }
 
     //doesn't need to be put into update
-    private void OnTriggerStay(Collider ammoCol)
+    private void OnTriggerEnter(Collider ammoCol)
     {
         //grab colision object
         collideObject = ammoCol.gameObject;
