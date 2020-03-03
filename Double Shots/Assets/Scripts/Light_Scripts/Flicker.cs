@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Flicker : MonoBehaviour
 {
-    public float fadeDuration;
-    public float pauseDuration;
-    public float originalOpacity;
-    public bool isTransparent;
+    private float fadeDuration;
+    private float pauseDuration;
+    private float originalOpacity;
+    private bool isTransparent;
     public Material M;
     float timer = 0;
     
