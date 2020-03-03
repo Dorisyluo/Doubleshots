@@ -474,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantedDrink: red
-  secsSeatPatience: 6
+  secsSeatPatience: 7
   speed: 5
   currentSeat: {fileID: 0}
   atSeat: 0

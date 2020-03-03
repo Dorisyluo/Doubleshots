@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantedDrink: pink
-  secsSeatPatience: 16
+  secsSeatPatience: 18
   speed: 7
   currentSeat: {fileID: 0}
   atSeat: 0
