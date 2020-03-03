@@ -37,6 +37,8 @@ public class CrankRevolution : MonoBehaviour
 		}
 		if (revolved)
 		{
+			//Insert intented crank behavior here
+			
 			revCount++;
 			Debug.Log("Revolution " + revCount);
 			revolved = false;

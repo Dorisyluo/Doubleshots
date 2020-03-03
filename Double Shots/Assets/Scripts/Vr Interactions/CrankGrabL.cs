@@ -6,7 +6,6 @@ public class CrankGrabL : MonoBehaviour
 {
 		public GameObject CollidingObject;
         public GameObject objectInHand;
-        public GameObject parent;
         public CrankGrabTracker grabTracker;
 
         public void OnTriggerEnter(Collider other)

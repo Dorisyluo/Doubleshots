@@ -16,10 +16,10 @@ public class CrankGrabTracker : MonoBehaviour
 	void Update()
 	{
 		if (isGrabbed){
-			mRigid.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+			mRigid.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX;
 		} else 
 		{
-			mRigid.constraints = RigidbodyConstraints.FreezePositionZ;
+			mRigid.constraints = RigidbodyConstraints.FreezePositionX;
 		}
 	}
 }
