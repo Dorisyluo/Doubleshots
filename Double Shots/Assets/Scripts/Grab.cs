@@ -10,7 +10,7 @@ public class Grab : MonoBehaviour
 
     AudioSource audioSource;
 
-    public void start()
+    public void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
@@ -52,16 +52,13 @@ public class Grab : MonoBehaviour
             gameObject.AddComponent<FixedJoint>();
             gameObject.GetComponent<FixedJoint>().connectedBody = CollidingObject.GetComponent<Rigidbody>();
         }
-        else if (CollidingObject.CompareTag("Ammo"))
-        {
-            //Check to see if this is not called every frame
-            audioSource.PlayOneShot(audioSource.clip, 0.7f);
-        }
         else
         {
             objectInHand = CollidingObject;
             objectInHand.GetComponent<ShotType>().grabbed = true;
             objectInHand.transform.SetParent(gripTrans);
+            //Check to see if this is not called every frame
+            audioSource.PlayOneShot(audioSource.clip, 0.7f);
             objectInHand.transform.localPosition = new Vector3(0, 0, 0);
             objectInHand.transform.localRotation = Quaternion.Euler(0, -30, 90);
             objectInHand.GetComponent<Rigidbody>().isKinematic = true;
