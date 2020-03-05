@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class debug : MonoBehaviour
+public class Stephen : MonoBehaviour
 {
 
     public GameObject positionerThing;
@@ -13,10 +13,10 @@ public class debug : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         
-        positionerThing.transform.position = pPosition;
+
+        
         //stops showing the gun
-        annoyingGun.setActive(false);
+        annoyingGun.gameObject.SetActive(false);
         
     }
 
@@ -24,6 +24,6 @@ public class debug : MonoBehaviour
     void Update()
     {
         //this freezes the camera on y axis cause i got tired of it falling to the ground.
-        pPosition = new Vector3(pPoisition.x, yValueFreeze, pPoisition.z);
+        positionerThing.transform.position = new Vector3(positionerThing.transform.position.x, yValueFreeze, positionerThing.transform.position.z);
     }
 }

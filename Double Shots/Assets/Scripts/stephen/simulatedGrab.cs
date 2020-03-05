@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grab : MonoBehaviour
+public class SimulatedGrab : MonoBehaviour
 {
     public GameObject CollidingObject;
     public GameObject objectInHand;
@@ -31,12 +31,12 @@ public class Grab : MonoBehaviour
 
     void Update() // refreshing program confirms trigger pressure and determines whether holding or releasing object
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f && CollidingObject && objectInHand == null)
+        if (Input.GetMouseButtonDown(0) && CollidingObject && objectInHand == null)
         {
             GrabObject();
         }
 
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") < 0.2f && objectInHand)
+        if (Input.GetMouseButtonDown(0) && objectInHand)
         {
             ReleaseObject();
         }
