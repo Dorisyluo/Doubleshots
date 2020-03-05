@@ -23,7 +23,7 @@ public class Flicker : MonoBehaviour
     }
     IEnumerator FadeTo(Material M, bool isTransparent, float fadeDuration, float originalOpacity)
     {
-        Debug.Log("fadeto is called");
+        //Debug.Log("fadeto is called");
         Color color = M.color;
         float startOpacity = color.a;
         float t = 0;
@@ -41,7 +41,7 @@ public class Flicker : MonoBehaviour
             float blend = Mathf.Clamp01(t / fadeDuration);
             color.a = Mathf.Lerp(startOpacity, targetOpacity, blend);
             M.color = color;
-            Debug.Log("exiting fadeto");
+            //Debug.Log("exiting fadeto");
             yield return null;
 
         }

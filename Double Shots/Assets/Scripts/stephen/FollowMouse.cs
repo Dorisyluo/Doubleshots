@@ -16,7 +16,7 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FollowCursor();
     }
 
     void FollowCursor()

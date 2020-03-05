@@ -8,6 +8,7 @@ public class Stephen : MonoBehaviour
     public GameObject positionerThing;
     public GameObject annoyingGun;
     public GameObject handThing;
+    public GameObject gunPump;
     public float yValueFreeze;
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class Stephen : MonoBehaviour
         
         //stops showing the gun
         annoyingGun.gameObject.SetActive(false);
+        gunPump.gameObject.SetActive(false);
         
     }
 

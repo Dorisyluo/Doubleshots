@@ -14,8 +14,8 @@ public class SimulatedGrab : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
-    public void OnTriggerEnter(Collider other)
+    
+    public void OnTriggerStay(Collider other) //Stephen's notes: ontriggerstay works better than ontrigger enter here.
     {
         if (other.gameObject.CompareTag("Ammo") || other.gameObject.CompareTag("Pump"))
         {
@@ -31,13 +31,15 @@ public class SimulatedGrab : MonoBehaviour
 
     void Update() // refreshing program confirms trigger pressure and determines whether holding or releasing object
     {
-        if (Input.GetMouseButtonDown(0) && CollidingObject && objectInHand == null)
+        if (Input.GetMouseButtonDown(0) && CollidingObject && objectInHand == null) //Stephen's Notes: had to replace this with a mouse button cause i odn't have VR
         {
             GrabObject();
+            Debug.Log("object grabbed");
         }
 
-        if (Input.GetMouseButtonDown(0) && objectInHand)
+        if (Input.GetMouseButtonUp(0) && objectInHand) // Stephen's Notes: again, no VR so i hhad to replace this with mouse
         {
+            Debug.Log("object released");
             ReleaseObject();
         }
     }
