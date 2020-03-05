@@ -6412,7 +6412,7 @@ GameObject:
   - component: {fileID: 1074128479}
   - component: {fileID: 1074128478}
   m_Layer: 0
-  m_Name: CustomHandLeft
+  m_Name: CustomHandLeft2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6447,7 +6447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollidingObject: {fileID: 0}
   objectInHand: {fileID: 0}
-  gripTrans: {fileID: 1262363963}
+  gripTrans: {fileID: 0}
 --- !u!82 &1074128479
 AudioSource:
   m_ObjectHideFlags: 0
