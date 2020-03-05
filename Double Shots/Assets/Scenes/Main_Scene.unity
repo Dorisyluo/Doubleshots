@@ -4367,6 +4367,11 @@ PrefabInstance:
       propertyPath: gripTrans
       value: 
       objectReference: {fileID: 2068416159}
+    - target: {fileID: 6798328887210563981, guid: 1e3a8d9c636c2f545a4da595d5a5e4c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6798328887462196725, guid: 1e3a8d9c636c2f545a4da595d5a5e4c5,
         type: 3}
       propertyPath: m_StepOffset
@@ -4447,6 +4452,11 @@ PrefabInstance:
       propertyPath: pump
       value: 
       objectReference: {fileID: 1180614915}
+    - target: {fileID: 6798328888233665401, guid: 1e3a8d9c636c2f545a4da595d5a5e4c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6798328888707303150, guid: 1e3a8d9c636c2f545a4da595d5a5e4c5,
         type: 3}
       propertyPath: emptyGun
@@ -5738,6 +5748,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 990196727}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1512221049
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512221047}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: -3.352945e-16, y: -0.06, z: 0.06}
 --- !u!82 &1512221053
 AudioSource:
   m_ObjectHideFlags: 0
