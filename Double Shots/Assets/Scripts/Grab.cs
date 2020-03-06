@@ -15,21 +15,7 @@ public class Grab : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    //original code<<<<<<<<<<<<<<<<<<<<<<<
-    /*
     public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Ammo") || other.gameObject.CompareTag("Pump"))
-        {
-            CollidingObject = other.gameObject;
-
-        }
-    }
-    */
-    //original code<<<<<<<<<<<<<<<<<<<<<<<
-    
-    //notes: OnTriggerStay works better in my opinion. has better detection for bullets when they are within the trigger. 
-    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Ammo") || other.gameObject.CompareTag("Pump"))
         {
