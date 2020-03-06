@@ -31,12 +31,12 @@ public class Grab : MonoBehaviour
 
     void Update() // refreshing program confirms trigger pressure and determines whether holding or releasing object
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f && CollidingObject && objectInHand == null)
+        if ((Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") > 0.2f || OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) && CollidingObject && objectInHand == null)
         {
             GrabObject();
         }
 
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") < 0.2f && objectInHand)
+        if ((Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger") < 0.2f && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) < 0.5f) && objectInHand)
         {
             ReleaseObject();
         }
