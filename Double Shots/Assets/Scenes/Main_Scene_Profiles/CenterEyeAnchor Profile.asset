@@ -15,22 +15,22 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   intensity:
     overrideState: 1
     value: 1.5
   threshold:
     overrideState: 1
-    value: 0.85
+    value: 1
   softKnee:
     overrideState: 1
     value: 0.154
   clamp:
     overrideState: 1
-    value: 100
+    value: 2
   diffusion:
     overrideState: 1
-    value: 4.54
+    value: 2.1
   anamorphicRatio:
     overrideState: 1
     value: -0.933
@@ -45,43 +45,6 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
-    overrideState: 0
-    value: 0
---- !u!114 &-3213202377121001853
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a34fa72bd4185749832024e9c8010bf, type: 3}
-  m_Name: ScreenSpaceReflections
-  m_EditorClassIdentifier: 
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  preset:
-    overrideState: 1
-    value: 2
-  maximumIterationCount:
-    overrideState: 0
-    value: 16
-  resolution:
-    overrideState: 0
-    value: 0
-  thickness:
-    overrideState: 0
-    value: 8
-  maximumMarchDistance:
-    overrideState: 1
-    value: 4.7
-  distanceFade:
-    overrideState: 1
-    value: 0.5
-  vignette:
     overrideState: 0
     value: 0
 --- !u!114 &11400000
@@ -99,7 +62,7 @@ MonoBehaviour:
   settings:
   - {fileID: -7994826709358581895}
   - {fileID: 5707087779601460093}
-  - {fileID: -3213202377121001853}
+  - {fileID: 5978937719934298164}
 --- !u!114 &5707087779601460093
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -149,3 +112,31 @@ MonoBehaviour:
   quality:
     overrideState: 0
     value: 2
+--- !u!114 &5978937719934298164
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556797029e73b2347956b6579e77e05b, type: 3}
+  m_Name: DepthOfField
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  focusDistance:
+    overrideState: 1
+    value: 7.95
+  aperture:
+    overrideState: 1
+    value: 3.3
+  focalLength:
+    overrideState: 1
+    value: 73
+  kernelSize:
+    overrideState: 1
+    value: 0
