@@ -10336,7 +10336,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0.05, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009562255, y: 1.5860881, z: -0.012700254}
+  m_ConnectedAnchor: {x: 0.009562251, y: 1.5860896, z: -0.012700254}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -12147,7 +12147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6798328887663356539
 Transform:
   m_ObjectHideFlags: 0
@@ -12177,6 +12177,7 @@ GameObject:
   - component: {fileID: 6798328887708144863}
   - component: {fileID: 6798328887708144862}
   - component: {fileID: 1512221053}
+  - component: {fileID: 6798328887708144858}
   m_Layer: 0
   m_Name: CustomHandLeft
   m_TagString: Untagged
@@ -12199,6 +12200,20 @@ Transform:
   m_Father: {fileID: 6798328887090578638}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!136 &6798328887708144858
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798328887708144856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.11
+  m_Height: 0.51
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.05}
 --- !u!114 &6798328887708144860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14041,7 +14056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6798328888653287567
 Transform:
   m_ObjectHideFlags: 0
