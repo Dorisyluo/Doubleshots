@@ -15,7 +15,7 @@ public class Grab : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Ammo") || other.gameObject.CompareTag("Pump"))
         {
