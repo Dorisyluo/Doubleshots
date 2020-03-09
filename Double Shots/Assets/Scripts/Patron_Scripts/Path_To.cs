@@ -42,13 +42,13 @@ public class Path_To : MonoBehaviour
         {
             moveToDoor();
         }
-        else if (entered)
+        else if (entered && !GetComponent<Patron_Data>().isSatisfied)
         {
             moveToSeat();
         }
         if (GetComponent<Patron_Data>().isSatisfied)
         {
-            exit();
+            Invoke("exit" ,2f);
 
         }
 
@@ -75,6 +75,8 @@ public class Path_To : MonoBehaviour
 
     void exit()
     {
+
+        agent.isStopped = false;
         GetComponent<Patron_Data>().atSeat = false;
         agent.SetDestination(doorLocation);
     }
@@ -100,10 +102,7 @@ public class Path_To : MonoBehaviour
             {
                 agent.isStopped = true;
             }
-            else
-            {
-                agent.isStopped = false;
-            }
+
 
             GetComponent<Patron_Data>().atSeat = true;
         }

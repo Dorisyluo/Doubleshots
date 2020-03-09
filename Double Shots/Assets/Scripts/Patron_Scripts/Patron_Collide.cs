@@ -7,6 +7,7 @@ public class Patron_Collide : MonoBehaviour
     private GameObject collideObject;
     private int typeCompare;
     private GameObject observer;
+    public GameObject correctOrderUI;
 
     AudioSource audioSource;
     public AudioClip correctOrder, wrongOrder;
@@ -14,6 +15,7 @@ public class Patron_Collide : MonoBehaviour
     private void Start()
     {
         observer = GameObject.Find("Observer");
+        correctOrderUI.SetActive(false);
         switch (GetComponent<Patron_Data>().wantedDrink)
         {
             case "red":
@@ -41,9 +43,16 @@ public class Patron_Collide : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
     }
-
+    private void Update()
+    {
+        if (GetComponent<Patron_Data>().isSatisfied)
+        {
+            correctOrderUI.SetActive(true);
+            
+        }
+    }
     //doesn't need to be put into update
-    private void OnTriggerStay(Collider ammoCol)
+    private void OnTriggerEnter(Collider ammoCol)
     {
         //grab colision object
         collideObject = ammoCol.gameObject;
@@ -52,22 +61,25 @@ public class Patron_Collide : MonoBehaviour
         //check if mans is aggro
 
         if(collideObject.tag == "Projectile"){
-            
-            if(collideObject.GetComponent<ShotType>().type == typeCompare && !GetComponent<Patron_Data>().isSatisfied)
+            if (!GetComponent<Patron_Data>().isSatisfied)
             {
-                
-                observer.GetComponent<Observer_Data>().score += 10;
-                GetComponent<Patron_Data>().isSatisfied = true;
-                audioSource.PlayOneShot(correctOrder, 0.75f);
+                if (collideObject.GetComponent<ShotType>().type == typeCompare)
+                {
+
+                    observer.GetComponent<Observer_Data>().score += 10;
+                    GetComponent<Patron_Data>().isSatisfied = true;
+                    
+                    audioSource.PlayOneShot(correctOrder, 0.75f);
+                }
+                else
+                {
+
+                    observer.GetComponent<Observer_Data>().score -= 10;
+                    GetComponent<Patron_Data>().isHostile = true;
+                    audioSource.PlayOneShot(wrongOrder, 0.75f);
+                }
+                Destroy(collideObject);
             }
-            else
-            {
-                
-                observer.GetComponent<Observer_Data>().score -= 10;
-                GetComponent<Patron_Data>().isHostile = true;
-                audioSource.PlayOneShot(wrongOrder, 0.75f);
-            }
-            Destroy(collideObject);
 
 
         }
