@@ -8,6 +8,7 @@ public class Patron_Data : MonoBehaviour
     public string wantedDrink;
     public float secsSeatPatience;
     public float speed;
+    public bool special;
     [HideInInspector]
     public GameObject currentSeat;
     [HideInInspector]
