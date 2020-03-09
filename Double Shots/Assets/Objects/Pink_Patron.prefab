@@ -62,6 +62,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1271251769148075069, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1336e5139ac99d641a4fac7aecfe470c, type: 2}
     - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: wantedDrink
@@ -90,7 +95,12 @@ PrefabInstance:
     - target: {fileID: 5382395357765207281, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_Name
-      value: Pink2
+      value: Pink_Patron
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434825421132567448, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: G
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8949281953016845950, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
