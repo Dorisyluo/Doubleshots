@@ -26,7 +26,7 @@ public class Patron_Patience : MonoBehaviour
             patience -= Time.deltaTime;
             patienceSilder.value = patience;
             patienceUI.SetActive(true);
-            //patienceImage.fillAmount -= Time.deltaTime/GetComponent<Patron_Data>().secsSeatPatience;
+            patienceImage.fillAmount -= Time.deltaTime/GetComponent<Patron_Data>().secsSeatPatience;
         }
         noPatience();
         if (GetComponent<Patron_Data>().isSatisfied)
