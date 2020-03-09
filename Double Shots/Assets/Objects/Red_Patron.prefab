@@ -100,7 +100,17 @@ PrefabInstance:
     - target: {fileID: 5382395357765207281, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_Name
-      value: Red2
+      value: Red_Patron
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434825421132567448, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: G
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434825421132567448, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: B
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8949281953016845950, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
