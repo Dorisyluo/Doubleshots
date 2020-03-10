@@ -694,7 +694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patienceUI: {fileID: 273058902444858032}
   patienceSilder: {fileID: 8453557373309693114}
-  patienceImage: {fileID: 2196646199623055699}
+  patienceImage:
+  - {fileID: 2196646199623055699}
   wait: 2
 --- !u!114 &3004098099881614718
 MonoBehaviour:
