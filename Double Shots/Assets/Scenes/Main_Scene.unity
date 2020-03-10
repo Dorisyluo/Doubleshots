@@ -10344,10 +10344,10 @@ ConfigurableJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5389859687610592583}
   m_ConnectedBody: {fileID: 91935123}
-  m_Anchor: {x: 0, y: 0.5, z: 0}
+  m_Anchor: {x: 0, y: -0.61, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.17600185, y: -0.3910229, z: -50.000225}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 0.17600185, y: -0.39096949, z: 61.00027}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -10360,9 +10360,9 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.1
+    limit: 0.075
     bounciness: 0
-    contactDistance: 0
+    contactDistance: 100
   m_AngularXLimitSpring:
     spring: 0
     damper: 0
@@ -10385,13 +10385,13 @@ ConfigurableJoint:
     limit: 0
     bounciness: 0
     contactDistance: 0
-  m_TargetPosition: {x: -0.2, y: 0, z: 0}
+  m_TargetPosition: {x: 0, y: 0, z: 0}
   m_TargetVelocity: {x: 0, y: 0, z: 0}
   m_XDrive:
     serializedVersion: 3
-    positionSpring: 0.01
-    positionDamper: 0.01
-    maximumForce: 3.4028233e+38
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 0
   m_YDrive:
     serializedVersion: 3
     positionSpring: 0
@@ -12855,7 +12855,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.04, y: 0.1, z: 0.09}
+  m_Size: {x: 0.08, y: 0.1, z: 0.09}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &6798328887927448914
 Transform:
@@ -12865,7 +12865,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6798328887927448925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6940003, y: 0.375, z: 0}
+  m_LocalPosition: {x: -0.6276, y: 0.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1013799249849463513}

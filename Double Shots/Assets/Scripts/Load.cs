@@ -52,7 +52,7 @@ public class Load : MonoBehaviour
                     loadedShotL.transform.parent = L.transform;
                     loadedL = true;
                 }
-                else
+                else if(loadedR != true)
                 {
                     loadedShotR = other.gameObject;
                     loadedShotR.transform.parent = R.transform;
