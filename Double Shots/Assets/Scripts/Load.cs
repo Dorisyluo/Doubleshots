@@ -17,6 +17,7 @@ public class Load : MonoBehaviour
     public Material T;
     public GameObject barrel1;
     public GameObject barrel2;
+    public Flip flips;
     private GameObject loadedShot;
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class Load : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Ammo") && !(loadedL && loadedR))
+        if (other.CompareTag("Ammo") && !(loadedL && loadedR) && flips.flipped)
         {
             float distL = Vector3.Distance(other.transform.position, L.transform.position);
             float distR = Vector3.Distance(other.transform.position, R.transform.position);
