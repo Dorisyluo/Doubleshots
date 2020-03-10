@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class colorL : MonoBehaviour
+public class colorR : MonoBehaviour
 {
     private int R;
     private int G;
     private int B;
-    private Material[] lMat;
+    private Material[] rMat;
 
     public void Start()
     {
-        lMat = GetComponent<Renderer>().materials;
-        lMat[0].EnableKeyword("_EMISSION");
-        lMat[1].EnableKeyword("_EMISSION");
+        rMat = GetComponent<Renderer>().materials;
+        rMat[0].EnableKeyword("_EMISSION");
+        rMat[1].EnableKeyword("_EMISSION");
         R = 0;
         G = 0;
         B = 0;
@@ -27,7 +27,7 @@ public class colorL : MonoBehaviour
         {
             R = 1;
         }
-        if(type == 2 || type == 4 || type == 6)
+        if (type == 2 || type == 4 || type == 6)
         {
             G = 1;
         }
@@ -35,15 +35,15 @@ public class colorL : MonoBehaviour
         {
             B = 1;
         }
-        lMat[0].SetColor("_EmissionColor", new Color(R, G, B));
-        lMat[1].SetColor("_EmissionColor", new Color(R, G, B));
+        rMat[0].SetColor("_EmissionColor", new Color(R, G, B));
+        rMat[1].SetColor("_EmissionColor", new Color(R, G, B));
     }
     public void Empty()
     {
         R = 1;
         G = 1;
         B = 1;
-        lMat[0].SetColor("_EmissionColor", new Color(R, G, B));
-        lMat[1].SetColor("_EmissionColor", new Color(R, G, B));
+        rMat[0].SetColor("_EmissionColor", new Color(R, G, B));
+        rMat[1].SetColor("_EmissionColor", new Color(R, G, B));
     }
 }
