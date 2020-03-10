@@ -48,7 +48,7 @@ public class Path_To : MonoBehaviour
         }
         if (GetComponent<Patron_Data>().isSatisfied)
         {
-            exit();
+            Invoke("exit" ,2f);
 
         }
 
