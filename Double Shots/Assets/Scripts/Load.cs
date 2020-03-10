@@ -15,6 +15,7 @@ public class Load : MonoBehaviour
     public Material Y;
     public Material P;
     public Material T;
+    public GameObject barrel1;
     private GameObject loadedShot;
 
     // Update is called once per frame
@@ -51,6 +52,7 @@ public class Load : MonoBehaviour
                     loadedShotL = other.gameObject;
                     loadedShotL.transform.parent = L.transform;
                     loadedL = true;
+                    barrel1.GetComponent<colorL>().Change(loadedShotL.GetComponent<ShotType>().type);
                 }
                 else if(loadedR != true)
                 {
@@ -101,7 +103,7 @@ public class Load : MonoBehaviour
                 loadedShotL.GetComponent<Renderer>().material = T;
                 loadedShotR.GetComponent<Renderer>().material = T;
             }
-        }
-
+            GetComponent<colorL>().Change(Ltype);
+        }       
     }
 }
