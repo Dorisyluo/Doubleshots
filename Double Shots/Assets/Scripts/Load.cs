@@ -15,6 +15,9 @@ public class Load : MonoBehaviour
     public Material Y;
     public Material P;
     public Material T;
+    public GameObject barrel1;
+    public GameObject barrel2;
+    public Flip flips;
     private GameObject loadedShot;
 
     // Update is called once per frame
@@ -24,7 +27,7 @@ public class Load : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Ammo") && !(loadedL && loadedR))
+        if (other.CompareTag("Ammo") && !(loadedL && loadedR) && flips.flipped)
         {
             float distL = Vector3.Distance(other.transform.position, L.transform.position);
             float distR = Vector3.Distance(other.transform.position, R.transform.position);
@@ -51,12 +54,14 @@ public class Load : MonoBehaviour
                     loadedShotL = other.gameObject;
                     loadedShotL.transform.parent = L.transform;
                     loadedL = true;
+                    barrel1.GetComponent<colorL>().Change(loadedShotL.GetComponent<ShotType>().type);
                 }
-                else
+                else if(loadedR != true)
                 {
                     loadedShotR = other.gameObject;
                     loadedShotR.transform.parent = R.transform;
                     loadedR = true;
+                    barrel2.GetComponent<colorR>().Change(loadedShotR.GetComponent<ShotType>().type);
                 }
                 loadedShot = other.gameObject;
                 loadedShot.transform.localPosition = Vector3.zero;
@@ -85,6 +90,7 @@ public class Load : MonoBehaviour
             if ((Ltype == 1 || Rtype == 1) && (Ltype == 2 || Rtype == 2))
             {
                 loadedShotL.GetComponent<ShotType>().type = 4;
+                loadedShotR.GetComponent<ShotType>().type = 4;
                 loadedShotL.GetComponent<Renderer>().material = Y;
                 loadedShotR.GetComponent<Renderer>().material = Y;
 
@@ -92,16 +98,19 @@ public class Load : MonoBehaviour
             if ((Ltype == 1 || Rtype == 1) && (Ltype == 3 || Rtype == 3))
             {
                 loadedShotL.GetComponent<ShotType>().type = 5;
+                loadedShotR.GetComponent<ShotType>().type = 5;
                 loadedShotL.GetComponent<Renderer>().material = P;
                 loadedShotR.GetComponent<Renderer>().material = P;
             }
             if ((Ltype == 3 || Rtype == 3) && (Ltype == 2 || Rtype == 2))
             {
                 loadedShotL.GetComponent<ShotType>().type = 6;
+                loadedShotR.GetComponent<ShotType>().type = 6;
                 loadedShotL.GetComponent<Renderer>().material = T;
                 loadedShotR.GetComponent<Renderer>().material = T;
             }
-        }
-
+            barrel1.GetComponent<colorL>().Change(loadedShotL.GetComponent<ShotType>().type);
+            barrel2.GetComponent<colorR>().Change(loadedShotR.GetComponent<ShotType>().type);
+        }       
     }
 }
