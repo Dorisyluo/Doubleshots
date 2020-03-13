@@ -12,6 +12,9 @@ public class Fire : MonoBehaviour
     public GameObject shotP;
     public GameObject shotT;
     public GameObject Load;
+    public GameObject barrel1;
+    public GameObject barrel2;
+    public Flip flips;
     private Load Loader;
     private bool fired;
 
@@ -29,7 +32,7 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f && fired == false)
+        if(OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f && fired == false && !flips.flipped)
         {
             fired = true;
             if(Loader.loadedL)
@@ -65,11 +68,13 @@ public class Fire : MonoBehaviour
                 bullet.GetComponent<Rigidbody>().AddForce(transform.right * -1000);
                 Loader.loadedL = false;
                 Destroy(Loader.loadedShotL);
+                barrel1.GetComponent<colorL>().Empty();
 
-                if(projType == 4 || projType == 5 || projType == 6)
+                if (projType == 4 || projType == 5 || projType == 6)
                 {
                     Loader.loadedR = false;
                     Destroy(Loader.loadedShotR);
+                    barrel2.GetComponent<colorR>().Empty();
                 }
             }
             else if(Loader.loadedR){
@@ -92,6 +97,7 @@ public class Fire : MonoBehaviour
                 bullet.GetComponent<Rigidbody>().AddForce(transform.right * -1000);
                 Loader.loadedR = false;
                 Destroy(Loader.loadedShotR);
+                barrel2.GetComponent<colorR>().Empty();
             }
             else
             {
