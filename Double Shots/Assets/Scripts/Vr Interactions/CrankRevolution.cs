@@ -18,6 +18,10 @@ public class CrankRevolution : MonoBehaviour
 	public float currentPos;
 	private int revCount = 0;
 
+	public GameObject green;
+	public GameObject red;
+	public GameObject blue;
+
 	void start(){
 		revolved = false;
 	}
@@ -37,7 +41,9 @@ public class CrankRevolution : MonoBehaviour
 		}
 		if (revolved)
 		{
-			//Insert intented crank behavior here
+			green.GetComponent<ShotType>().respawn();
+			red.GetComponent<ShotType>().respawn();
+			blue.GetComponent<ShotType>().respawn();
 			
 			revCount++;
 			Debug.Log("Revolution " + revCount);

@@ -21,11 +21,14 @@ public class ShotType : MonoBehaviour
     {
         if(grabbed && !spawned)
         {
-            Instantiate(this.gameObject, currentPos, Quaternion.identity);
             spawned = true;
         }else if(!grabbed && spawned)
         {
             spawned = false;
         }
+    }
+
+    public void respawn(){
+    	Instantiate(this.gameObject, currentPos, Quaternion.identity);
     }
 }

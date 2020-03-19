@@ -2571,6 +2571,7 @@ GameObject:
   - component: {fileID: 8060977555746219214}
   - component: {fileID: 8060977555746219213}
   - component: {fileID: 8060977555746219212}
+  - component: {fileID: 1174442203242234165}
   - component: {fileID: 3568782171828787567}
   - component: {fileID: 8060977555746219208}
   m_Layer: 0
@@ -2665,6 +2666,21 @@ MonoBehaviour:
   CollidingObject: {fileID: 0}
   objectInHand: {fileID: 0}
   gripTrans: {fileID: 8060977554963288107}
+--- !u!114 &1174442203242234165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8060977555746219210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2428a7b28d2037e49b35cb3c15c34620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollidingObject: {fileID: 0}
+  objectInHand: {fileID: 0}
+  grabTracker: {fileID: 0}
 --- !u!82 &3568782171828787567
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3582,7 +3598,7 @@ GameObject:
   - component: {fileID: 8060977556184659486}
   - component: {fileID: 8060977556184659485}
   m_Layer: 0
-  m_Name: Player_new 1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
