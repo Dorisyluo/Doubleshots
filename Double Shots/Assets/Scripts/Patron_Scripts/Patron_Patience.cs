@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Patron_Patience : MonoBehaviour
 {
-    private float patience;
+    [HideInInspector]
+    public float patience;
     public GameObject patienceUI;
     public Slider patienceSilder;
     public Image patienceImage;
