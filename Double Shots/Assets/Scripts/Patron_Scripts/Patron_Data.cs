@@ -8,7 +8,7 @@ public class Patron_Data : MonoBehaviour
     public string wantedDrink;
     public float secsSeatPatience;
     public float speed;
-    public bool special;
+    public bool super;
     [HideInInspector]
     public GameObject currentSeat;
     [HideInInspector]
@@ -19,4 +19,42 @@ public class Patron_Data : MonoBehaviour
     public bool isSatisfied;
     [HideInInspector]
     public bool isHostile;
+    private string[] drinkList = { "red", "blue", "green", "yellow", "teal", "purple" };
+    [HideInInspector]
+    public List<bool> phaseSatified;
+    //[HideInInspector]
+    public List<string> superWanted;
+    [HideInInspector]
+    public int totalDrinks = 7;
+    void Start()
+    {
+        if (super) 
+        {
+            assignDrinks();
+        }
+        
+    }
+    private void Update()
+    {
+        Debug.Log(superWanted[3]);
+    }
+    private void assignDrinks()
+    {
+        for (int i = 0; i < totalDrinks; i++)
+        {
+            if (i < 2)
+            {
+                superWanted.Add(drinkList[Random.Range(0, 3)]);
+            }
+            else if (i < 4)
+            {
+                superWanted.Add(drinkList[Random.Range(3, 6)]);
+            }
+            else
+            {
+                superWanted.Add(drinkList[Random.Range(0, 6)]);
+            }
+
+        }
+    }
 }
