@@ -548,12 +548,15 @@ MonoBehaviour:
   wantedDrink: blue
   secsSeatPatience: 10
   speed: 10
-  special: 0
+  super: 0
   currentSeat: {fileID: 0}
   atSeat: 0
   atPool: 0
   isSatisfied: 0
   isHostile: 0
+  phaseSatified: 
+  superWanted: []
+  totalDrinks: 7
 --- !u!114 &2936954401859658132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,6 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a6415cbbbc6ee4d8ba070eea70cc0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patience: 0
   patienceUI: {fileID: 273058902444858032}
   patienceSilder: {fileID: 8453557373309693114}
   patienceImage: {fileID: 0}
@@ -996,6 +1000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hood2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7529128504406668851, guid: d32fb5934fb73804cb0df2da7af7a237,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32fb5934fb73804cb0df2da7af7a237, type: 3}
