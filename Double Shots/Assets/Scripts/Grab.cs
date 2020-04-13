@@ -9,6 +9,7 @@ public class Grab : MonoBehaviour
     public Transform gripTrans;
 
     AudioSource audioSource;
+    public AudioClip pumpGrab;
 
     public void Start()
     {
@@ -51,6 +52,7 @@ public class Grab : MonoBehaviour
             objectInHand = CollidingObject;
             gameObject.AddComponent<FixedJoint>();
             gameObject.GetComponent<FixedJoint>().connectedBody = CollidingObject.GetComponent<Rigidbody>();
+            audioSource.PlayOneShot(pumpGrab, 0.7f);
         }
         else
         {
