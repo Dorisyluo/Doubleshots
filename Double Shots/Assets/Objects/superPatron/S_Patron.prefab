@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1251024325475855564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421218877145540120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc50f1d7e5a3f7441b36efd59d9d67c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctOrderUI: {fileID: 6861126661738367668}
+  correctOrder: {fileID: 8300000, guid: c16f166913941b3408d58426c59da39e, type: 3}
+  wrongOrder: {fileID: 8300000, guid: 9fd72ae5bedff6d4cadd756043953f49, type: 3}
 --- !u!1001 &1418313390971183849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 5382395357765207281, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_Name
-      value: Super_Patron
+      value: S_Patron
       objectReference: {fileID: 0}
     - target: {fileID: 8737828710699546086, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
@@ -127,11 +142,24 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.42
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3004098099881614718, guid: 1a15dd1a99467dd4b96411572d0e45c9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1a15dd1a99467dd4b96411572d0e45c9, type: 3}
+--- !u!1 &6421218877145540120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5382395357765207281, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1418313390971183849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1930874075858517104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1418313390971183849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6861126661738367668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5519516328545019997, guid: 1a15dd1a99467dd4b96411572d0e45c9,
     type: 3}
   m_PrefabInstance: {fileID: 1418313390971183849}
   m_PrefabAsset: {fileID: 0}

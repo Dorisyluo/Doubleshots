@@ -19,9 +19,7 @@ public class Patron_Data : MonoBehaviour
     public bool isSatisfied;
     [HideInInspector]
     public bool isHostile;
-    private string[] drinkList = { "red", "blue", "green", "yellow", "teal", "purple" };
-    [HideInInspector]
-    public List<bool> phaseSatified;
+    private string[] drinkList = { "red", "blue", "green", "yellow", "teal", "pink" };
     //[HideInInspector]
     public List<string> superWanted;
     [HideInInspector]
@@ -33,10 +31,6 @@ public class Patron_Data : MonoBehaviour
             assignDrinks();
         }
         
-    }
-    private void Update()
-    {
-        Debug.Log(superWanted[3]);
     }
     private void assignDrinks()
     {
