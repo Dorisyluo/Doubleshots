@@ -56,6 +56,7 @@ public class Super_Patron_Collider : MonoBehaviour
                     else if (correctCount%2==0 && correctCount <=4)
                     {
                         GetComponent<Patron_Patience>().patience = GetComponent<Patron_Data>().secsSeatPatience;
+                        observer.GetComponent<Observer_Data>().score += 10;
                     }
                     audioSource.PlayOneShot(correctOrder, 0.75f);
                 }
