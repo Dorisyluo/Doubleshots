@@ -13,7 +13,7 @@ public class ShotType : MonoBehaviour
     {
         grabbed = false;
         spawned = false;
-        currentPos = this.transform.position;
+        
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class ShotType : MonoBehaviour
     {
         if(grabbed && !spawned)
         {
+        	//respawn();
             spawned = true;
         }else if(!grabbed && spawned)
         {
@@ -29,6 +30,13 @@ public class ShotType : MonoBehaviour
     }
 
     public void respawn(){
+    	if (type == 1){
+        	currentPos = new Vector3(-0.405f, 1.282f, -16.08f);
+        } else if (type == 2){
+        	currentPos = new Vector3(-0.005f, 1.2604f, -16.02213f);
+       	} else if (type == 3){
+       		currentPos = new Vector3(0.548f, 1.289f, -16.159f);
+       	}
     	Instantiate(this.gameObject, currentPos, Quaternion.identity);
     }
 }
