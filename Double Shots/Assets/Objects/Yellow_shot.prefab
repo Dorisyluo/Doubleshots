@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1055940254941535644}
   - component: {fileID: 1055940254941535617}
   m_Layer: 0
-  m_Name: Green_shot
+  m_Name: Yellow_shot
   m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c3162d85a7d8474086dc0ff3705e6e1, type: 2}
+  - {fileID: 2100000, guid: 60c50e4250d3a0f4692e9a9a32c2f3ed, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
