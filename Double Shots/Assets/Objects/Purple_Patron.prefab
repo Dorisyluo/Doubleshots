@@ -87,25 +87,45 @@ PrefabInstance:
       propertyPath: G
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2865533174489711334, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: R
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4855822419331790956, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4855822419331790956, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.5045042
+      objectReference: {fileID: 0}
     - target: {fileID: 5382395357765207281, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_Name
-      value: Pink_Patron
+      value: Purple_Patron
       objectReference: {fileID: 0}
     - target: {fileID: 7434825421132567448, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: G
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7434825421132567448, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: R
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8949281953016845950, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: G
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949281953016845950, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: R
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a15dd1a99467dd4b96411572d0e45c9, type: 3}

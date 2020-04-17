@@ -5,9 +5,9 @@ using UnityEngine;
 public class Change_Color : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int R;
-    public int G;
-    public int B;
+    public float R;
+    public float G;
+    public float B;
     void Start()
     {
         Material patronMat = GetComponent<Renderer>().material;

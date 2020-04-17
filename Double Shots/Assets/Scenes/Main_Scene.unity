@@ -3155,7 +3155,7 @@ PrefabInstance:
         type: 3}
       propertyPath: patrons.Array.data[1]
       value: 
-      objectReference: {fileID: 1813402613764257975, guid: 9d8e116ab984e0248a98ab6b76efe9e8,
+      objectReference: {fileID: 3546436040130094044, guid: 844d05caba3048840b53b17132329f13,
         type: 3}
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}
@@ -3178,7 +3178,7 @@ PrefabInstance:
         type: 3}
       propertyPath: patrons.Array.data[4]
       value: 
-      objectReference: {fileID: 1813402613764257975, guid: 9d8e116ab984e0248a98ab6b76efe9e8,
+      objectReference: {fileID: 3546436040130094044, guid: 844d05caba3048840b53b17132329f13,
         type: 3}
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}
@@ -3196,7 +3196,7 @@ PrefabInstance:
         type: 3}
       propertyPath: patrons.Array.data[7]
       value: 
-      objectReference: {fileID: 3546436040130094044, guid: 844d05caba3048840b53b17132329f13,
+      objectReference: {fileID: 1813402613764257975, guid: 9d8e116ab984e0248a98ab6b76efe9e8,
         type: 3}
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}
@@ -4468,6 +4468,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 8060977555266684171, guid: 0836c35f18922d84a86c5c00b9c1955b,
+        type: 3}
+      propertyPath: shotO
+      value: 
+      objectReference: {fileID: 5010864577066962087, guid: b15c82397c0ce4d4f8d083c4bc25587a,
+        type: 3}
+    - target: {fileID: 8060977555601290008, guid: 0836c35f18922d84a86c5c00b9c1955b,
+        type: 3}
+      propertyPath: G
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c3162d85a7d8474086dc0ff3705e6e1, type: 2}
+    - target: {fileID: 8060977555601290008, guid: 0836c35f18922d84a86c5c00b9c1955b,
+        type: 3}
+      propertyPath: O
+      value: 
+      objectReference: {fileID: 2100000, guid: 031509f403cf46f40a6e303a8ae0ef98, type: 2}
     - target: {fileID: 8060977555746219208, guid: 0836c35f18922d84a86c5c00b9c1955b,
         type: 3}
       propertyPath: m_Radius
