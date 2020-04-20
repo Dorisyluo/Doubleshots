@@ -6,11 +6,11 @@ public class Fire : MonoBehaviour
 {
     private GameObject projectile;
     public GameObject shotR;
-    public GameObject shotG;
-    public GameObject shotB;
     public GameObject shotY;
+    public GameObject shotB;
+    public GameObject shotO;
+    public GameObject shotG;
     public GameObject shotP;
-    public GameObject shotT;
     public GameObject Load;
     public GameObject barrel1;
     public GameObject barrel2;
@@ -43,7 +43,7 @@ public class Fire : MonoBehaviour
                     projectile = shotR;
                 }else if(projType == 2)
                 {
-                    projectile = shotG;
+                    projectile = shotY;
                 }
                 else if (projType == 3)
                 {
@@ -51,16 +51,16 @@ public class Fire : MonoBehaviour
                 }
                 else if (projType == 4)
                 {
-                    projectile = shotY;
+                    projectile = shotO;
 
                 }
                 else if (projType == 5)
                 {
-                    projectile = shotP;
+                    projectile = shotG;
                 }
                 else if (projType == 6)
                 {
-                    projectile = shotT;
+                    projectile = shotP;
                 }
 
                 gunShot.PlayOneShot(gunShot.clip, 0.7f);
@@ -85,7 +85,7 @@ public class Fire : MonoBehaviour
                 }
                 else if (projType == 2)
                 {
-                    projectile = shotG;
+                    projectile = shotY;
                 }
                 else
                 {
