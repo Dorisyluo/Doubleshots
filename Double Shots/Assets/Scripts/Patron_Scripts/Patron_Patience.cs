@@ -6,15 +6,15 @@ public class Patron_Patience : MonoBehaviour
 {
     private float patience;
     public GameObject patienceUI;
-    public Slider patienceSilder;
+    //public Slider patienceSilder;
     public Image[] patienceImage;
     public float wait;
     // Start is called before the first frame update
     void Start()
     {
         patience = GetComponent<Patron_Data>().secsSeatPatience;
-        patienceSilder.maxValue = GetComponent<Patron_Data>().secsSeatPatience;
-        patienceSilder.value = GetComponent<Patron_Data>().secsSeatPatience;
+        //patienceSilder.maxValue = GetComponent<Patron_Data>().secsSeatPatience;
+        //patienceSilder.value = GetComponent<Patron_Data>().secsSeatPatience;
         patienceUI.SetActive(false);
     }
 
@@ -24,7 +24,7 @@ public class Patron_Patience : MonoBehaviour
         if (GetComponent<Patron_Data>().atSeat && !GetComponent<Patron_Data>().isSatisfied)
         {
             patience -= Time.deltaTime;
-            patienceSilder.value = patience;
+            //patienceSilder.value = patience;
             patienceUI.SetActive(true);
             foreach(Image patienceUI in patienceImage)
             {

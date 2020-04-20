@@ -321,7 +321,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &338729947642213785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -693,7 +693,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patienceUI: {fileID: 273058902444858032}
-  patienceSilder: {fileID: 8453557373309693114}
   patienceImage:
   - {fileID: 2196646199623055699}
   wait: 2
@@ -1066,7 +1065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4347347637810153781
 RectTransform:
   m_ObjectHideFlags: 0
