@@ -12,9 +12,9 @@ public class Load : MonoBehaviour
     public GameObject R;
     public GameObject HighL;
     public GameObject HighR;
-    public Material Y;
+    public Material O;
+    public Material G;
     public Material P;
-    public Material T;
     public GameObject barrel1;
     public GameObject barrel2;
     public Flip flips;
@@ -91,8 +91,8 @@ public class Load : MonoBehaviour
             {
                 loadedShotL.GetComponent<ShotType>().type = 4;
                 loadedShotR.GetComponent<ShotType>().type = 4;
-                loadedShotL.GetComponent<Renderer>().material = Y;
-                loadedShotR.GetComponent<Renderer>().material = Y;
+                loadedShotL.GetComponent<Renderer>().material = O;
+                loadedShotR.GetComponent<Renderer>().material = O;
 
             }
             if ((Ltype == 1 || Rtype == 1) && (Ltype == 3 || Rtype == 3))
@@ -106,8 +106,8 @@ public class Load : MonoBehaviour
             {
                 loadedShotL.GetComponent<ShotType>().type = 6;
                 loadedShotR.GetComponent<ShotType>().type = 6;
-                loadedShotL.GetComponent<Renderer>().material = T;
-                loadedShotR.GetComponent<Renderer>().material = T;
+                loadedShotL.GetComponent<Renderer>().material = G;
+                loadedShotR.GetComponent<Renderer>().material = G;
             }
             barrel1.GetComponent<colorL>().Change(loadedShotL.GetComponent<ShotType>().type);
             barrel2.GetComponent<colorR>().Change(loadedShotR.GetComponent<ShotType>().type);
