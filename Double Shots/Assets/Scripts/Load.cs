@@ -99,15 +99,15 @@ public class Load : MonoBehaviour
             {
                 loadedShotL.GetComponent<ShotType>().type = 5;
                 loadedShotR.GetComponent<ShotType>().type = 5;
-                loadedShotL.GetComponent<Renderer>().material = G;
-                loadedShotR.GetComponent<Renderer>().material = G;
+                loadedShotL.GetComponent<Renderer>().material = P;
+                loadedShotR.GetComponent<Renderer>().material = P;
             }
             if ((Ltype == 3 || Rtype == 3) && (Ltype == 2 || Rtype == 2))
             {
                 loadedShotL.GetComponent<ShotType>().type = 6;
                 loadedShotR.GetComponent<ShotType>().type = 6;
-                loadedShotL.GetComponent<Renderer>().material = P;
-                loadedShotR.GetComponent<Renderer>().material = P;
+                loadedShotL.GetComponent<Renderer>().material = G;
+                loadedShotR.GetComponent<Renderer>().material = G;
             }
             barrel1.GetComponent<colorL>().Change(loadedShotL.GetComponent<ShotType>().type);
             barrel2.GetComponent<colorR>().Change(loadedShotR.GetComponent<ShotType>().type);

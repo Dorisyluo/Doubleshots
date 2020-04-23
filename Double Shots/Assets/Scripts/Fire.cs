@@ -56,11 +56,11 @@ public class Fire : MonoBehaviour
                 }
                 else if (projType == 5)
                 {
-                    projectile = shotG;
+                    projectile = shotP;
                 }
                 else if (projType == 6)
                 {
-                    projectile = shotP;
+                    projectile = shotG;
                 }
 
                 gunShot.PlayOneShot(gunShot.clip, 0.7f);
