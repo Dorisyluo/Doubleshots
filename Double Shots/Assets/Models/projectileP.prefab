@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6299542416017310584}
   - component: {fileID: 7062671765642759931}
   m_Layer: 0
-  m_Name: projectileR 2
+  m_Name: projectileP
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,4 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grabbed: 0
-  type: 5
+  type: 6
