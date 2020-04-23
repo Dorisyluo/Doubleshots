@@ -9,6 +9,9 @@ public class Patron_Data : MonoBehaviour
     public float secsSeatPatience;
     public float speed;
     public bool super;
+    public Color[] colorList = new Color[6];
+    [HideInInspector]
+    public Color currentColor;
     [HideInInspector]
     public GameObject currentSeat;
     [HideInInspector]
@@ -19,19 +22,28 @@ public class Patron_Data : MonoBehaviour
     public bool isSatisfied;
     [HideInInspector]
     public bool isHostile;
-    private string[] drinkList = { "red", "blue", "green", "yellow", "teal", "pink" };
+    private string[] drinkList = { "red", "yellow", "blue", "orange", "purple", "green" };
     //[HideInInspector]
     public List<string> superWanted;
     [HideInInspector]
     public int totalDrinks = 7;
     void Start()
     {
-        if (super) 
+        if (super)
         {
             assignDrinks();
+            assignColor();
         }
-        
+
     }
+    void Update(){
+        if (super)
+        {
+            assignColor();
+        }
+
+    }
+
     private void assignDrinks()
     {
         for (int i = 0; i < totalDrinks; i++)
@@ -50,5 +62,32 @@ public class Patron_Data : MonoBehaviour
             }
 
         }
+    }
+    private void assignColor()
+    {
+            switch (superWanted[0])
+            {
+                case "red":
+                    currentColor = colorList[0];
+                    break;
+                case "yellow":
+                    currentColor = colorList[1];
+                    break;
+                case "blue":
+                    currentColor = colorList[2];
+                    break;
+                case "orange":
+                    currentColor = colorList[3];
+                    break;
+                case "purple":
+                    currentColor = colorList[4];
+                    break;
+                case "green":
+                    currentColor = colorList[5];
+                    break;
+                default:
+                    currentColor = Color.white;
+                        break;
+            }
     }
 }

@@ -81,20 +81,20 @@ public class Super_Patron_Collider : MonoBehaviour
             case "red":
                 typeCompare = 1;
                 break;
-            case "green":
+            case "yellow":
                 typeCompare = 2;
                 break;
             case "blue":
                 typeCompare = 3;
                 break;
-            case "yellow":
+            case "orange":
                 typeCompare = 4;
                 break;
-            case "pink":
-                typeCompare = 5;
-                break;
-            case "teal":
+            case "purple":
                 typeCompare = 6;
+                break;
+            case "green":
+                typeCompare = 5;
                 break;
             default:
                 typeCompare = -1;
