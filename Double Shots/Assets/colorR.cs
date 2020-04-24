@@ -38,13 +38,13 @@ public class colorR : MonoBehaviour
         }
         else if (type == 5)
         {
-            rMat[0].SetColor("_EmissionColor", Color.green);
-            rMat[1].SetColor("_EmissionColor", Color.green);
+            rMat[0].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+            rMat[1].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
         }
         else if (type == 6)
         {
-            rMat[0].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
-            rMat[1].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+            rMat[0].SetColor("_EmissionColor", Color.green);
+            rMat[1].SetColor("_EmissionColor", Color.green);
         }
     }
     public void Empty()

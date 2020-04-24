@@ -34,18 +34,18 @@ public class colorL : MonoBehaviour
         }
         else if (type == 4)
         {
-            lMat[0].SetColor("_EmissionColor", new Color(0.5f, 0.3f, 0f));
-            lMat[1].SetColor("_EmissionColor", new Color(0.5f, 0.3f, 0f));
+            lMat[0].SetColor("_EmissionColor", new Color(0.7f, 0.3f, 0f));
+            lMat[1].SetColor("_EmissionColor", new Color(0.7f, 0.3f, 0f));
         }
         else if (type == 5)
         {
-            lMat[0].SetColor("_EmissionColor", Color.green);
-            lMat[1].SetColor("_EmissionColor", Color.green);
+            lMat[0].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+            lMat[1].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
         }
         else if (type == 6)
         {
-            lMat[0].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
-            lMat[1].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+            lMat[0].SetColor("_EmissionColor", Color.green);
+            lMat[1].SetColor("_EmissionColor", Color.green);
         }
 
     }
