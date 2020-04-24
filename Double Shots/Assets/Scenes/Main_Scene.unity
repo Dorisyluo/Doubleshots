@@ -3143,7 +3143,7 @@ PrefabInstance:
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}
       propertyPath: patrons.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}
@@ -3155,7 +3155,7 @@ PrefabInstance:
         type: 3}
       propertyPath: patrons.Array.data[1]
       value: 
-      objectReference: {fileID: 3546436040130094044, guid: 844d05caba3048840b53b17132329f13,
+      objectReference: {fileID: 5890464156042115683, guid: 97879b01a718f8749ac2a918e3b68ccd,
         type: 3}
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}

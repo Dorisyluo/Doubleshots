@@ -40,9 +40,8 @@ public class Super_Patron_Collider : MonoBehaviour
 
         if (collideObject.tag == "Projectile")
         {
-            if (!GetComponent<Patron_Data>().isSatisfied)
-            {
-               
+            if (!GetComponent<Patron_Data>().isSatisfied && !GetComponent<Patron_Data>().isHostile)
+            {      
                 if (collideObject.GetComponent<ShotType>().type == typeCompare)
                 {
 
