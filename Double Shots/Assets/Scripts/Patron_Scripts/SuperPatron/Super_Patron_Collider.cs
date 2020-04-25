@@ -47,6 +47,7 @@ public class Super_Patron_Collider : MonoBehaviour
 
                     observer.GetComponent<Observer_Data>().score += 5;
                     GetComponent<Patron_Data>().superWanted.RemoveAt(0);
+                    GetComponent<Patron_Data>().isSatisfied = true; //FOR TESTING
                     correctCount++;
                     if(GetComponent<Patron_Data>().superWanted.Count <= 0)
                     {
@@ -90,10 +91,10 @@ public class Super_Patron_Collider : MonoBehaviour
                 typeCompare = 4;
                 break;
             case "purple":
-                typeCompare = 6;
+                typeCompare = 5;
                 break;
             case "green":
-                typeCompare = 5;
+                typeCompare = 6;
                 break;
             default:
                 typeCompare = -1;

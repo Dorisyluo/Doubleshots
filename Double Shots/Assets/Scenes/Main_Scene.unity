@@ -629,6 +629,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1794389547047494929, guid: 722b17055f777fc468e57974307da6cd,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 5904115690631625180, guid: 722b17055f777fc468e57974307da6cd,
         type: 3}
       propertyPath: m_Name
@@ -3155,7 +3160,7 @@ PrefabInstance:
         type: 3}
       propertyPath: patrons.Array.data[1]
       value: 
-      objectReference: {fileID: 5890464156042115683, guid: 97879b01a718f8749ac2a918e3b68ccd,
+      objectReference: {fileID: 1434777964849998438, guid: f8cc63624be9deb40adab1b852224a24,
         type: 3}
     - target: {fileID: 1552939295944812464, guid: d62e2db85d165b94cbb9f292557b2ec6,
         type: 3}
