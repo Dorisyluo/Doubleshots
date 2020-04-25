@@ -47,7 +47,7 @@ public class Super_Patron_Collider : MonoBehaviour
 
                     observer.GetComponent<Observer_Data>().score += 5;
                     GetComponent<Patron_Data>().superWanted.RemoveAt(0);
-                    GetComponent<Patron_Data>().isSatisfied = true; //FOR TESTING
+                    //GetComponent<Patron_Data>().isSatisfied = true; //FOR TESTING
                     correctCount++;
                     if(GetComponent<Patron_Data>().superWanted.Count <= 0)
                     {
