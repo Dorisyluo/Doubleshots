@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class colorR : MonoBehaviour
 {
-    private int R;
-    private int G;
-    private int B;
+
     private Material[] rMat;
 
     public void Start()
@@ -14,36 +12,45 @@ public class colorR : MonoBehaviour
         rMat = GetComponent<Renderer>().materials;
         rMat[0].EnableKeyword("_EMISSION");
         rMat[1].EnableKeyword("_EMISSION");
-        R = 0;
-        G = 0;
-        B = 0;
+
     }
     public void Change(int type)
     {
-        R = 0;
-        G = 0;
-        B = 0;
-        if (type == 1 || type == 4 || type == 5)
+        if (type == 1)
         {
-            R = 1;
+            rMat[0].SetColor("_EmissionColor", Color.red);
+            rMat[1].SetColor("_EmissionColor", Color.red);
         }
-        if (type == 2 || type == 4 || type == 6)
+        else if (type == 2)
         {
-            G = 1;
+            rMat[0].SetColor("_EmissionColor", Color.yellow);
+            rMat[1].SetColor("_EmissionColor", Color.yellow);
         }
-        if (type == 3 || type == 5 || type == 6)
+        else if (type == 3)
         {
-            B = 1;
+            rMat[0].SetColor("_EmissionColor", Color.blue);
+            rMat[1].SetColor("_EmissionColor", Color.blue);
         }
-        rMat[0].SetColor("_EmissionColor", new Color(R, G, B));
-        rMat[1].SetColor("_EmissionColor", new Color(R, G, B));
+        else if (type == 4)
+        {
+            rMat[0].SetColor("_EmissionColor", new Color(0.7f, 0.3f, 0f));
+            rMat[1].SetColor("_EmissionColor", new Color(0.7f, 0.3f, 0f));
+        }
+        else if (type == 5)
+        {
+            rMat[0].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+            rMat[1].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+        }
+        else if (type == 6)
+        {
+            rMat[0].SetColor("_EmissionColor", Color.green);
+            rMat[1].SetColor("_EmissionColor", Color.green);
+        }
     }
     public void Empty()
     {
-        R = 1;
-        G = 1;
-        B = 1;
-        rMat[0].SetColor("_EmissionColor", new Color(R, G, B));
-        rMat[1].SetColor("_EmissionColor", new Color(R, G, B));
+
+        rMat[0].SetColor("_EmissionColor", Color.white);
+        rMat[1].SetColor("_EmissionColor", Color.white);
     }
 }
