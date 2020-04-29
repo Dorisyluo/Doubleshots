@@ -68,9 +68,9 @@ public class Load : MonoBehaviour
                 loadedShot.GetComponent<Rigidbody>().velocity = Vector3.zero;
                 loadedShot.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
                 loadedShot.GetComponent<Rigidbody>().useGravity = false;
-                loadedShot.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+                loadedShot.gameObject.GetComponent<BoxCollider>().enabled = false;
                 loadedShot.transform.localScale = new Vector3(0.05f, 0.01f, 0.05f);
-                loadedShot.transform.localRotation = Quaternion.Euler(0, 0, 90);
+                loadedShot.transform.localRotation = Quaternion.Euler(-90, 0, 90);
             }
         }
     }
