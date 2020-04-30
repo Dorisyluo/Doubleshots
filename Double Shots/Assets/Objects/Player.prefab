@@ -1834,6 +1834,7 @@ MonoBehaviour:
   Load: {fileID: 8060977555601289991}
   barrel1: {fileID: 8972878258529303468}
   barrel2: {fileID: 2550769343340714156}
+  shot: {fileID: 5010864577066962087, guid: ad7a237d3987b044cba9210a348ef11e, type: 3}
   flips: {fileID: 4058665061272659812}
   emptyGun: {fileID: 8300000, guid: 67d26ba678c01a84d92be69f0f1926bc, type: 3}
 --- !u!82 &3568782171343065897
