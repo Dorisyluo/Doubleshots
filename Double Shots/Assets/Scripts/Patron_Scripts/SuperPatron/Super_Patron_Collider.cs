@@ -23,7 +23,10 @@ public class Super_Patron_Collider : MonoBehaviour
     }
     private void Update()
     {
-        compareDrink();
+        if(GetComponent<Patron_Data>().superWanted.Count > 0)
+        {
+            compareDrink();
+        }   
         if (GetComponent<Patron_Data>().isSatisfied)
         {
             correctOrderUI.SetActive(true);
@@ -47,7 +50,6 @@ public class Super_Patron_Collider : MonoBehaviour
 
                     observer.GetComponent<Observer_Data>().score += 5;
                     GetComponent<Patron_Data>().superWanted.RemoveAt(0);
-                    //GetComponent<Patron_Data>().isSatisfied = true; //FOR TESTING
                     correctCount++;
                     if(GetComponent<Patron_Data>().superWanted.Count <= 0)
                     {

@@ -37,7 +37,7 @@ public class Patron_Data : MonoBehaviour
 
     }
     void Update(){
-        if (super)
+        if (super && superWanted.Count > 0)
         {
             assignColor();
         }
