@@ -77,6 +77,21 @@ PrefabInstance:
       propertyPath: wantedDrink
       value: orange
       objectReference: {fileID: 0}
+    - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: colorList.Array.data[0].r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: colorList.Array.data[0].g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: colorList.Array.data[0].b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2865533174489711334, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: R

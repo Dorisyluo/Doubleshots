@@ -45,7 +45,7 @@ public class Patron_Collide : MonoBehaviour
     }
     private void Update()
     {
-        if (GetComponent<Patron_Data>().isSatisfied)
+        if(GetComponent<Patron_Data>().isSatisfied)
         {
             correctOrderUI.SetActive(true);
             
@@ -58,10 +58,8 @@ public class Patron_Collide : MonoBehaviour
         collideObject = ammoCol.gameObject;
         //do something depeding on type
 
-        //check if mans is aggro
-
         if(collideObject.tag == "Projectile"){
-            if (!GetComponent<Patron_Data>().isSatisfied)
+            if(!GetComponent<Patron_Data>().isSatisfied && !GetComponent<Patron_Data>().isHostile)
             {
                 if (collideObject.GetComponent<ShotType>().type == typeCompare)
                 {
