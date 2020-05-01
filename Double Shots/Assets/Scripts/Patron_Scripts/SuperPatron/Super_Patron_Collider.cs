@@ -8,6 +8,7 @@ public class Super_Patron_Collider : MonoBehaviour
     private int typeCompare;
     private GameObject observer;
     private int correctCount;
+    private int bullet;
     public GameObject correctOrderUI;
 
     AudioSource audioSource;
@@ -71,7 +72,15 @@ public class Super_Patron_Collider : MonoBehaviour
                 }
                 Destroy(collideObject);
             }
-
+            else if (GetComponent<Patron_Data>().isHostile)
+            {
+                if (collideObject.GetComponent<ShotType>().type == bullet)
+                {
+                    GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
+                    Destroy(collideObject);
+                    Destroy(this.gameObject);
+                }
+            }
 
         }
 

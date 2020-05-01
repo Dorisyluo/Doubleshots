@@ -49,11 +49,12 @@ public class Patron_Patience : MonoBehaviour
             GetComponent<Patron_Data>().isHostile = true;
             wait -= Time.deltaTime;
             ////////this check will get removed once a real bullet is added to the gun//////////////////////////
+            /*
             if(wait <= -3f)
             {
                 GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
                 Destroy(gameObject);
-            }
+            }*/
             
         }
     }
