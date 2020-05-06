@@ -9,6 +9,7 @@ public class Patron_Patience : MonoBehaviour
     public GameObject patienceUI;
     //public Slider patienceSilder;
     public Image[] patienceImage;
+    public Image border;
     public float wait;
     // Start is called before the first frame update
     void Start()
@@ -30,8 +31,13 @@ public class Patron_Patience : MonoBehaviour
             foreach(Image patienceUI in patienceImage)
             {
                 patienceUI.fillAmount -= Time.deltaTime / GetComponent<Patron_Data>().secsSeatPatience;
-            }
-            
+                patienceUI.color = GetComponent<Patron_Data>().currentColor;
+                if (GetComponent<Patron_Data>().super)
+                {
+                    border.color = GetComponent<Patron_Data>().currentColor;
+                }
+             }
+         
         }
         noPatience();
         if (GetComponent<Patron_Data>().isSatisfied)

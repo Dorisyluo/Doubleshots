@@ -661,12 +661,12 @@ MonoBehaviour:
   speed: 10
   super: 0
   colorList:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 1, g: 1, b: 0, a: 0}
-  - {r: 0, g: 0, b: 1, a: 0}
-  - {r: 1, g: 0.5019608, b: 0, a: 0}
-  - {r: 0.5019608, g: 0, b: 0.5019608, a: 0}
-  - {r: 0, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
+  - {r: 1, g: 0.5019608, b: 0, a: 1}
+  - {r: 0.5019608, g: 0, b: 0.5019608, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   currentSeat: {fileID: 0}
   atSeat: 0

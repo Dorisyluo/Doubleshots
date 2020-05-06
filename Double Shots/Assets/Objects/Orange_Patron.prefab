@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: colorList.Array.data[0].r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}

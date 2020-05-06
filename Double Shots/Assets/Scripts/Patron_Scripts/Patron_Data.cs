@@ -32,14 +32,18 @@ public class Patron_Data : MonoBehaviour
         if (super)
         {
             assignDrinks();
-            assignColor();
+            assignColor(superWanted[0]);
+        }
+        else
+        {
+            assignColor(wantedDrink);
         }
 
     }
     void Update(){
         if (super && superWanted.Count > 0)
         {
-            assignColor();
+            assignColor(superWanted[0]);
         }
 
     }
@@ -63,9 +67,9 @@ public class Patron_Data : MonoBehaviour
 
         }
     }
-    private void assignColor()
+    private void assignColor(string clr)
     {
-            switch (superWanted[0])
+            switch (clr)
             {
                 case "red":
                     currentColor = colorList[0];
