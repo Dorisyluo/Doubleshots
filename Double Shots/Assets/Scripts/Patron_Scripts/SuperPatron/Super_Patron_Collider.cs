@@ -23,7 +23,10 @@ public class Super_Patron_Collider : MonoBehaviour
     }
     private void Update()
     {
-        compareDrink();
+        if(GetComponent<Patron_Data>().superWanted.Count > 0)
+        {
+            compareDrink();
+        }   
         if (GetComponent<Patron_Data>().isSatisfied)
         {
             correctOrderUI.SetActive(true);
@@ -40,9 +43,8 @@ public class Super_Patron_Collider : MonoBehaviour
 
         if (collideObject.tag == "Projectile")
         {
-            if (!GetComponent<Patron_Data>().isSatisfied)
-            {
-               
+            if (!GetComponent<Patron_Data>().isSatisfied && !GetComponent<Patron_Data>().isHostile)
+            {      
                 if (collideObject.GetComponent<ShotType>().type == typeCompare)
                 {
 
@@ -81,19 +83,19 @@ public class Super_Patron_Collider : MonoBehaviour
             case "red":
                 typeCompare = 1;
                 break;
-            case "green":
+            case "yellow":
                 typeCompare = 2;
                 break;
             case "blue":
                 typeCompare = 3;
                 break;
-            case "yellow":
+            case "orange":
                 typeCompare = 4;
                 break;
-            case "pink":
+            case "purple":
                 typeCompare = 5;
                 break;
-            case "teal":
+            case "green":
                 typeCompare = 6;
                 break;
             default:

@@ -20,15 +20,19 @@ public class Patron_Shoot : MonoBehaviour
     {
         if (GetComponent<Patron_Data>().isHostile)
         {
-            if (notShot)
-            {
-               gunShot.PlayOneShot(gunShot.clip, 0.7f);
-               Vector3 shoot = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
-               bullet = Instantiate(projectile, shoot, Quaternion.identity) as GameObject;
-            }
-            notShot = false;
+            Invoke("shoot", 2f);
 
         }
         
+    }
+    private void shoot()
+    {
+        if (notShot)
+        {
+            gunShot.PlayOneShot(gunShot.clip, 0.7f);
+            Vector3 shoot = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
+            bullet = Instantiate(projectile, shoot, Quaternion.identity) as GameObject;
+        }
+        notShot = false;
     }
 }

@@ -38,6 +38,11 @@ public class Patron_Patience : MonoBehaviour
         {
             patienceUI.SetActive(false);
         }
+        else if (GetComponent<Patron_Data>().isHostile)
+        {
+            patienceUI.SetActive(false);
+            patience = 0;
+        }
         
     }
 
@@ -45,14 +50,10 @@ public class Patron_Patience : MonoBehaviour
     {
         if (patience <= 0)
         {
-                
+            GetComponent<Patron_Data>().isHostile = true;
             wait -= Time.deltaTime;
-            if(wait <= 0)
-            {
-                //Sound/Voice Line here
-                GetComponent<Patron_Data>().isHostile = true;  
-            }
-            if(wait <= -2f)
+            ////////this check will get removed once a real bullet is added to the gun//////////////////////////
+            if(wait <= -3f)
             {
                 GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
                 Destroy(gameObject);
