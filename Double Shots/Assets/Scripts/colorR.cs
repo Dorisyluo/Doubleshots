@@ -20,23 +20,42 @@ public class colorR : MonoBehaviour
     }
     public void Change(int type)
     {
-        R = 0;
-        G = 0;
-        B = 0;
-        if (type == 1 || type == 4 || type == 5)
+        if (type == 1)
         {
-            R = 1;
+            rMat[0].SetColor("_EmissionColor", Color.red);
+            rMat[1].SetColor("_EmissionColor", Color.red);
         }
-        if (type == 2 || type == 4 || type == 6)
+        else if (type == 2)
         {
-            G = 1;
+            rMat[0].SetColor("_EmissionColor", Color.yellow);
+            rMat[1].SetColor("_EmissionColor", Color.yellow);
         }
-        if (type == 3 || type == 5 || type == 6)
+        else if (type == 3)
         {
-            B = 1;
+            rMat[0].SetColor("_EmissionColor", Color.blue);
+            rMat[1].SetColor("_EmissionColor", Color.blue);
         }
-        rMat[0].SetColor("_EmissionColor", new Color(R, G, B));
-        rMat[1].SetColor("_EmissionColor", new Color(R, G, B));
+        else if (type == 4)
+        {
+            rMat[0].SetColor("_EmissionColor", new Color(1, 1.92f, 0.016f));
+            rMat[1].SetColor("_EmissionColor", new Color(1, 1.92f, 0.016f));
+
+        }
+        else if (type == 5)
+        {
+            rMat[0].SetColor("_EmissionColor", Color.magenta);
+            rMat[1].SetColor("_EmissionColor", Color.magenta);
+        }
+        else if (type == 6)
+        {
+            rMat[0].SetColor("_EmissionColor", Color.green);
+            rMat[1].SetColor("_EmissionColor", Color.green);
+        }
+        else if (type == 0)
+        {
+            rMat[0].SetColor("_EmissionColor", Color.black);
+            rMat[1].SetColor("_EmissionColor", Color.black);
+        }
     }
     public void Empty()
     {
