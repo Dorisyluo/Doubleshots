@@ -706,6 +706,7 @@ MonoBehaviour:
   patienceUI: {fileID: 273058902444858032}
   patienceImage:
   - {fileID: 2196646199623055699}
+  border: {fileID: 0}
   wait: 2
 --- !u!114 &3004098099881614718
 MonoBehaviour:

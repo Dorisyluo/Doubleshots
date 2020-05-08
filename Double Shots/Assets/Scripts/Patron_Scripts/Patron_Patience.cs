@@ -30,7 +30,7 @@ public class Patron_Patience : MonoBehaviour
             patienceUI.SetActive(true);
             foreach(Image patienceUI in patienceImage)
             {
-                patienceUI.fillAmount -= Time.deltaTime / GetComponent<Patron_Data>().secsSeatPatience;
+                patienceUI.fillAmount = patience / GetComponent<Patron_Data>().secsSeatPatience;
                 patienceUI.color = GetComponent<Patron_Data>().currentColor;
                 if (GetComponent<Patron_Data>().super)
                 {
