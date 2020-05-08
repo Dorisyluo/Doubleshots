@@ -1828,12 +1828,13 @@ MonoBehaviour:
   shotR: {fileID: 5010864577066962087, guid: 8041a148d61373641b341377c13bdf76, type: 3}
   shotY: {fileID: 5010864577066962087, guid: 87a4a14c272653b458a8b11984108cc0, type: 3}
   shotB: {fileID: 5010864577066962087, guid: 3c3d577e614cdc8408c37638ea3df34c, type: 3}
-  shotO: {fileID: 0}
+  shotO: {fileID: 5010864577066962087, guid: b15c82397c0ce4d4f8d083c4bc25587a, type: 3}
   shotG: {fileID: 5010864577066962087, guid: 4b2e3fbbd7730174290f12afa655c7ad, type: 3}
   shotP: {fileID: 5010864577066962087, guid: f7ff0158000dfc545ba3762437b779b2, type: 3}
   Load: {fileID: 8060977555601289991}
   barrel1: {fileID: 8972878258529303468}
   barrel2: {fileID: 2550769343340714156}
+  shot: {fileID: 5010864577066962087, guid: ad7a237d3987b044cba9210a348ef11e, type: 3}
   flips: {fileID: 4058665061272659812}
   emptyGun: {fileID: 8300000, guid: 67d26ba678c01a84d92be69f0f1926bc, type: 3}
 --- !u!82 &3568782171343065897
@@ -2308,8 +2309,8 @@ MonoBehaviour:
   R: {fileID: 8060977555422856477}
   HighL: {fileID: 8060977554884336541}
   HighR: {fileID: 8060977556115872993}
-  O: {fileID: 0}
-  G: {fileID: 0}
+  O: {fileID: 2100000, guid: 031509f403cf46f40a6e303a8ae0ef98, type: 2}
+  G: {fileID: 2100000, guid: 6c3162d85a7d8474086dc0ff3705e6e1, type: 2}
   P: {fileID: 2100000, guid: 0f32c2bbda88dcb4fae666cd1f9917bb, type: 2}
   barrel1: {fileID: 8972878258529303468}
   barrel2: {fileID: 2550769343340714156}
