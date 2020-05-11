@@ -37,8 +37,8 @@ public class colorR : MonoBehaviour
         }
         else if (type == 4)
         {
-            rMat[0].SetColor("_EmissionColor", new Color(1, 1.92f, 0.016f));
-            rMat[1].SetColor("_EmissionColor", new Color(1, 1.92f, 0.016f));
+            rMat[0].SetColor("_EmissionColor", new Color(1, 0.5f, 0));
+            rMat[1].SetColor("_EmissionColor", new Color(1, 0.5f, 0));
 
         }
         else if (type == 5)
