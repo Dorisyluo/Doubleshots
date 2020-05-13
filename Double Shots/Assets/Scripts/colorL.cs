@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class colorL : MonoBehaviour
 {
-
+    private int R;
+    private int Y;
+    private int B;
     private Material[] lMat;
 
     public void Start()
@@ -12,17 +14,18 @@ public class colorL : MonoBehaviour
         lMat = GetComponent<Renderer>().materials;
         lMat[0].EnableKeyword("_EMISSION");
         lMat[1].EnableKeyword("_EMISSION");
-
+        R = 0;
+        Y = 0;
+        B = 0;
     }
     public void Change(int type)
     {
-
         if (type == 1)
         {
             lMat[0].SetColor("_EmissionColor", Color.red);
             lMat[1].SetColor("_EmissionColor", Color.red);
         }
-        else if(type == 2)
+        else if (type == 2)
         {
             lMat[0].SetColor("_EmissionColor", Color.yellow);
             lMat[1].SetColor("_EmissionColor", Color.yellow);
@@ -34,25 +37,32 @@ public class colorL : MonoBehaviour
         }
         else if (type == 4)
         {
-            lMat[0].SetColor("_EmissionColor", new Color(0.7f, 0.3f, 0f));
-            lMat[1].SetColor("_EmissionColor", new Color(0.7f, 0.3f, 0f));
+            lMat[0].SetColor("_EmissionColor", new Color(1,0.5f,0));
+            lMat[1].SetColor("_EmissionColor", new Color(1,0.5f,0));
+
         }
         else if (type == 5)
         {
-            lMat[0].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
-            lMat[1].SetColor("_EmissionColor", new Color(0.5f, 0f, 0.5f));
+            lMat[0].SetColor("_EmissionColor", Color.magenta);
+            lMat[1].SetColor("_EmissionColor", Color.magenta);
         }
         else if (type == 6)
         {
             lMat[0].SetColor("_EmissionColor", Color.green);
             lMat[1].SetColor("_EmissionColor", Color.green);
         }
-
+        else if (type == 0)
+        {
+            lMat[0].SetColor("_EmissionColor", Color.black);
+            lMat[1].SetColor("_EmissionColor", Color.black);
+        }
     }
     public void Empty()
     {
-
-        lMat[0].SetColor("_EmissionColor", Color.white);
-        lMat[1].SetColor("_EmissionColor", Color.white);
+        R = 1;
+        Y = 1;
+        B = 1;
+        lMat[0].SetColor("_EmissionColor", new Color(R, Y, B));
+        lMat[1].SetColor("_EmissionColor", new Color(R, Y, B));
     }
 }

@@ -14,6 +14,7 @@ public class Fire : MonoBehaviour
     public GameObject Load;
     public GameObject barrel1;
     public GameObject barrel2;
+    public GameObject shot;
     public Flip flips;
     private Load Loader;
     private bool fired;
@@ -62,6 +63,10 @@ public class Fire : MonoBehaviour
                 {
                     projectile = shotG;
                 }
+                else if (projType == 0)
+                {
+                    projectile = shot;
+                }
 
                 gunShot.PlayOneShot(gunShot.clip, 0.7f);
                 GameObject bullet = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
@@ -86,6 +91,10 @@ public class Fire : MonoBehaviour
                 else if (projType == 2)
                 {
                     projectile = shotY;
+                }
+                else if (projType == 0)
+                {
+                    projectile = shot;
                 }
                 else
                 {
