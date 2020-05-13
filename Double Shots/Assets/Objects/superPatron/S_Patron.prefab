@@ -27,9 +27,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0cd8bcbec67324195448d5befd1fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  R: 0
-  G: 0
-  B: 0
   lt: {fileID: 5822455307525315205}
 --- !u!114 &7422322706722982631
 MonoBehaviour:
@@ -44,9 +41,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sp: {fileID: 6421218877145540120}
-  R: 0
-  G: 0
-  B: 0
   allMats: []
 --- !u!114 &7174072302053051355
 MonoBehaviour:
@@ -61,9 +55,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sp: {fileID: 6421218877145540120}
-  R: 0
-  G: 0
-  B: 0
   allMats: []
 --- !u!114 &976203711291086606
 MonoBehaviour:
@@ -78,9 +69,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sp: {fileID: 6421218877145540120}
-  R: 0
-  G: 0
-  B: 0
   allMats: []
 --- !u!1 &6200461831110810928
 GameObject:
@@ -173,6 +161,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 1543049968758455973, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}

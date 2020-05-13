@@ -15,6 +15,7 @@ public class Patron_Projectile : MonoBehaviour
         observer = GameObject.Find("Observer");
         player = GameObject.FindGameObjectsWithTag("Player")[0];
         playerPosition = player.transform.position;
+        transform.rotation = Quaternion.LookRotation((playerPosition - transform.position).normalized);
     }
 
     // Update is called once per frame
