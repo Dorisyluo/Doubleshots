@@ -42,6 +42,7 @@ public class Patron_Spawner : MonoBehaviour
                 {
                     choice = Random.Range(0, patrons.Length);
                     Instantiate(patrons[choice], transform.position, transform.rotation);
+                    patrons[choice].GetComponent<Path_To>().agent.Warp(transform.position);
                 }
 
                 yield return new WaitForSeconds(secSpawnDelay);

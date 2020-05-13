@@ -10,17 +10,17 @@ PrefabInstance:
     - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8.12
       objectReference: {fileID: 0}
     - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.07
       objectReference: {fileID: 0}
     - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.64
       objectReference: {fileID: 0}
     - target: {fileID: 676959681457610393, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
@@ -82,6 +82,21 @@ PrefabInstance:
       propertyPath: speed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2196646199623055699, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196646199623055699, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2196646199623055699, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2865533174489711334, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: B
@@ -130,6 +145,16 @@ PrefabInstance:
     - target: {fileID: 7434825421132567448, guid: 1a15dd1a99467dd4b96411572d0e45c9,
         type: 3}
       propertyPath: B
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278889727514283147, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8278889727514283147, guid: 1a15dd1a99467dd4b96411572d0e45c9,
+        type: 3}
+      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8949281953016845950, guid: 1a15dd1a99467dd4b96411572d0e45c9,

@@ -7,15 +7,16 @@ public class Patron_Patience : MonoBehaviour
     [HideInInspector]
     public float patience;
     public GameObject patienceUI;
-    public Slider patienceSilder;
-    public Image patienceImage;
+    //public Slider patienceSilder;
+    public Image[] patienceImage;
+    public Image border;
     public float wait;
     // Start is called before the first frame update
     void Start()
     {
         patience = GetComponent<Patron_Data>().secsSeatPatience;
-        patienceSilder.maxValue = GetComponent<Patron_Data>().secsSeatPatience;
-        patienceSilder.value = GetComponent<Patron_Data>().secsSeatPatience;
+        //patienceSilder.maxValue = GetComponent<Patron_Data>().secsSeatPatience;
+        //patienceSilder.value = GetComponent<Patron_Data>().secsSeatPatience;
         patienceUI.SetActive(false);
     }
 
@@ -25,9 +26,18 @@ public class Patron_Patience : MonoBehaviour
         if (GetComponent<Patron_Data>().atSeat && !GetComponent<Patron_Data>().isSatisfied)
         {
             patience -= Time.deltaTime;
-            patienceSilder.value = patience;
+            //patienceSilder.value = patience;
             patienceUI.SetActive(true);
-            //patienceImage.fillAmount -= Time.deltaTime/GetComponent<Patron_Data>().secsSeatPatience;
+            foreach(Image patienceUI in patienceImage)
+            {
+                patienceUI.fillAmount = patience / GetComponent<Patron_Data>().secsSeatPatience;
+                patienceUI.color = GetComponent<Patron_Data>().currentColor;
+                if (GetComponent<Patron_Data>().super)
+                {
+                    border.color = GetComponent<Patron_Data>().currentColor;
+                }
+             }
+         
         }
         noPatience();
         if (GetComponent<Patron_Data>().isSatisfied)
@@ -49,11 +59,12 @@ public class Patron_Patience : MonoBehaviour
             GetComponent<Patron_Data>().isHostile = true;
             wait -= Time.deltaTime;
             ////////this check will get removed once a real bullet is added to the gun//////////////////////////
+            /*
             if(wait <= -3f)
             {
                 GetComponent<Patron_Data>().currentSeat.GetComponent<Occupied>().occupied = false;
                 Destroy(gameObject);
-            }
+            }*/
             
         }
     }
