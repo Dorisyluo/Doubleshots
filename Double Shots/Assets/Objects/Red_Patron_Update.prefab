@@ -602,6 +602,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5952214216659296542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5198226176256982566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c642a2dfe0c32d4d9665930918ef029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  M: {fileID: 0}
 --- !u!114 &7184367168632835215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,19 +630,6 @@ MonoBehaviour:
   R: 1
   G: 0
   B: 0
---- !u!114 &5952214216659296542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5198226176256982566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c642a2dfe0c32d4d9665930918ef029, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  M: {fileID: 0}
 --- !u!1 &5382395357765207281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1228,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CowboyAnimations
       objectReference: {fileID: 0}
+    - target: {fileID: 5873136757314328381, guid: 0a43457069ba44a4c86517fba8cc8773,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 793b4bb3220d3bd42af5766055b5876e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a43457069ba44a4c86517fba8cc8773, type: 3}
 --- !u!4 &7044672540187721495 stripped
