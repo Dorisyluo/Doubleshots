@@ -603,8 +603,6 @@ GameObject:
   - component: {fileID: 4904901428420361964}
   - component: {fileID: 2961928672266791125}
   - component: {fileID: 2732283775383668601}
-  - component: {fileID: 5527313166265116650}
-  - component: {fileID: -7448474392957895270}
   m_Layer: 0
   m_Name: Base_Patron_Update
   m_TagString: Untagged
@@ -870,38 +868,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &5527313166265116650
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5382395357765207281}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0a43457069ba44a4c86517fba8cc8773, type: 3}
-  m_Controller: {fileID: 9100000, guid: 1dd57319eea53d44fa825b1e40d928a3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-7448474392957895270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5382395357765207281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1308e8eac0a9b8348baa7df7244639ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curspeed: 0
 --- !u!1 &5519516328545019997
 GameObject:
   m_ObjectHideFlags: 0
