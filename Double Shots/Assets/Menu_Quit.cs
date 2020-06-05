@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu_Quit : MonoBehaviour
 {
-    void OnCollisionEnter(Collider collision)
+    void OnTriggernEnter(Collider collision)
     {
         if (collision.CompareTag("Projectile"))
         {
