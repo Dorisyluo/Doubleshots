@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class menu_Start : MonoBehaviour
 {
-    void OnCollisionEnter(Collider collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.CompareTag("Projectile"))
         {
-            SceneManager.LoadScene("Main_Scene");
+            SceneManager.LoadScene("New_Enviroment");
         }
     }
 }
