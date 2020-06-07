@@ -4753,6 +4753,11 @@ PrefabInstance:
       propertyPath: board
       value: 
       objectReference: {fileID: 1285143238}
+    - target: {fileID: 3904251173582338590, guid: 0a2f3ca685a9f30488d721705f287d3c,
+        type: 3}
+      propertyPath: difficultySecStep
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2f3ca685a9f30488d721705f287d3c, type: 3}
 --- !u!1 &831625510
