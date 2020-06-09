@@ -14,4 +14,8 @@ public class Observer_Data : MonoBehaviour
     public int score;
     public TextMeshPro board;
     public bool gameOver;
+    //[HideInInspector]
+    public float difficulty = 1f;
+    public float difficultySecStep;
+
 }

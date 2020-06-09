@@ -9,7 +9,7 @@ public class menu_Start : MonoBehaviour
     {
         if (collision.CompareTag("Projectile"))
         {
-            SceneManager.LoadScene("Main_Scene");
+            SceneManager.LoadScene("New_Enviroment");
         }
     }
 }

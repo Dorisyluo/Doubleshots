@@ -9,6 +9,7 @@ public class Patron_Data : MonoBehaviour
     public float secsSeatPatience;
     public float speed;
     public bool super;
+    public GameObject observer;
     public Color[] colorList = new Color[6];
     [HideInInspector]
     public Color currentColor;
@@ -29,6 +30,10 @@ public class Patron_Data : MonoBehaviour
     public int totalDrinks = 7;
     void Start()
     {
+        observer = GameObject.Find("Observer");
+
+        secsSeatPatience = secsSeatPatience / observer.GetComponent<Observer_Data>().difficulty;
+        speed = speed * observer.GetComponent<Observer_Data>().difficulty;
         if (super)
         {
             assignDrinks();
