@@ -43,7 +43,7 @@ public class Countdown : MonoBehaviour
         {
             if(spawner.GetComponent<Patron_Spawner>().initialDelay <= 0)
             {
-                observer.GetComponent<Observer_Data>().difficulty += .1f;
+                observer.GetComponent<Observer_Data>().difficulty += .075f;
                 yield return new WaitForSeconds(observer.GetComponent<Observer_Data>().difficultySecStep);
             }
            

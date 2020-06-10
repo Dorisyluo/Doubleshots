@@ -28,12 +28,14 @@ public class Patron_Data : MonoBehaviour
     public List<string> superWanted;
     [HideInInspector]
     public int totalDrinks = 7;
+    float speedMod;
     void Start()
     {
         observer = GameObject.Find("Observer");
 
         secsSeatPatience = secsSeatPatience / observer.GetComponent<Observer_Data>().difficulty;
-        speed = speed * observer.GetComponent<Observer_Data>().difficulty;
+        speedMod = observer.GetComponent<Observer_Data>().difficulty - 0.05f;
+        speed = speed * speedMod;
         if (super)
         {
             assignDrinks();
